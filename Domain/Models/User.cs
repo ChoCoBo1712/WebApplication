@@ -18,6 +18,6 @@ namespace Domain.Models
         
         [Required] public string PasswordHash { get; set; }
         
-        [Required] public string Useric { get; set; }
+        [Required] public string Userpic { get; set; }
     }
 }
