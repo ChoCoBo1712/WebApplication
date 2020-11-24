@@ -8,9 +8,9 @@ namespace Domain.Models
         
         [Required] public string Username { get; set; }
         
-        [Required] public string Name { get; set; }
+        public string Name { get; set; }
         
-        [Required] public string Surname { get; set; }
+        public string Surname { get; set; }
         
         [Required] public string Email { get; set; }
         
@@ -18,6 +18,6 @@ namespace Domain.Models
         
         [Required] public string PasswordHash { get; set; }
         
-        [Required] public string Userpic { get; set; }
+        public string Userpic { get; set; }
     }
 }
