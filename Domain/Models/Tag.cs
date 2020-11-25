@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
@@ -9,5 +10,7 @@ namespace Domain.Models
         [Required] public string Name { get; set; }
         
         [Required] public string Description { get; set; }
+        
+        [Required] public List<Song> Songs { get; set; }
     }
 }

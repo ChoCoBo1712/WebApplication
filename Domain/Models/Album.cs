@@ -11,7 +11,9 @@ namespace Domain.Models
         
         [Required] public string Picture { get; set; }
         
-        [Required] public string Artist { get; set; }
+        [Required] public Artist Artist { get; set; }
+        
+        [Required] public int ArtistId { get; set; }
         
         [Required] public List<Song> Songs { get; set; }
     }

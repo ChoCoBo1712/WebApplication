@@ -6,7 +6,6 @@
     <e p="C:\Users\BigBe\RiderProjects\WebApplication" t="IncludeFlat">
       <e p="Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="Domain.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Album.cs" t="Include" />
@@ -25,9 +24,15 @@
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="Repository" t="IncludeRecursive">
+        <e p="ApplicationDbContext.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
-        <e p="Models" t="Include" />
+        <e p="Models" t="Include">
+          <e p="EFAlbum.cs" t="Include" />
+          <e p="EFArtist.cs" t="Include" />
+          <e p="EFSong.cs" t="Include" />
+          <e p="EFTag.cs" t="Include" />
+          <e p="EFUser.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

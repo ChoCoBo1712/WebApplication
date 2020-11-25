@@ -10,9 +10,9 @@ namespace Domain.Models
 
         [Required] public string Name { get; set; }
 
-        [Required] public string Artist { get; set; }
-
-        [Required] public string Album { get; set; }
+        [Required] public Album Album { get; set; }
+        
+        [Required] public int AlbumId { get; set; }
 
         [Required] public List<Tag> Tags { get; set; }
     }
