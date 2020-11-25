@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uVxrvLVK/gazgO7Rteh7Pn90hKYPWz/utX4Klxt6ROh3Xwr872M1xUgRGAws3uco9UNPFo+0ggWCSe6y6gvBkg==",
+  "dgSpecHash": "1sdF0B5HQD1O6P48LhvbhMITvV/wz8NhBy+ddsTy+oPfc5D7RA+gahG933QEnP0+Lxvj74hCXo6CcpzsSsVG5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
@@ -22,9 +22,12 @@
     "C:\\Users\\BigBe\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\BigBe\\.nuget\\packages\\npgsql\\5.0.0\\npgsql.5.0.0.nupkg.sha512",
+    "C:\\Users\\BigBe\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.0\\npgsql.entityframeworkcore.postgresql.5.0.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\BigBe\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
+    "C:\\Users\\BigBe\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\BigBe\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

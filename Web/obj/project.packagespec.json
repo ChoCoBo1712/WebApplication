@@ -19,7 +19,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj": {
+            "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -30,6 +34,18 @@
   },
   "frameworks": {
     "netcoreapp3.1": {
+      "dependencies": {
+        "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        },
+        "Microsoft.EntityFrameworkCore.Design": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[5.0.0, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",
