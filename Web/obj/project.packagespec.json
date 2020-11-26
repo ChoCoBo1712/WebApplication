@@ -22,6 +22,9 @@
         "projectReferences": {
           "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj": {
             "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj"
+          },
+          "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Service\\Service.csproj": {
+            "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Service\\Service.csproj"
           }
         }
       }

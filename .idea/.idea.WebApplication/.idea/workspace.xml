@@ -22,13 +22,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="Added Repository.cs">
-      <change afterPath="$PROJECT_DIR$/Service/Implementations/DataManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/Interfaces/IDataManager.cs" afterDir="false" />
+    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="repository done">
+      <change afterPath="$PROJECT_DIR$/Web/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Repository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/Repository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/Implementations/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Implementations/DataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/Interfaces/IDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Interfaces/IDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Service.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/obj/Service.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Service.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/obj/Web.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Web.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +88,7 @@
         <option value="$PROJECT_DIR$/Web/Startup.cs" />
         <option value="$PROJECT_DIR$/Service/Interfaces/IDataManager.cs" />
         <option value="$PROJECT_DIR$/Service/Implementations/DataManager.cs" />
+        <option value="$PROJECT_DIR$/Web/Controllers/HomeController.cs" />
       </list>
     </option>
   </component>
@@ -141,7 +156,7 @@
       <workItem from="1606136234009" duration="4528000" />
       <workItem from="1606217961257" duration="916000" />
       <workItem from="1606326816506" duration="8987000" />
-      <workItem from="1606341497454" duration="15031000" />
+      <workItem from="1606341497454" duration="18205000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606136494926</created>
@@ -234,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606396498646</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="repository done">
+      <created>1606404695538</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1606404695538</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +283,8 @@
     <MESSAGE value="Added services project" />
     <MESSAGE value="Added service project" />
     <MESSAGE value="Added Repository.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Repository.cs" />
+    <MESSAGE value="repository done" />
+    <option name="LAST_COMMIT_MESSAGE" value="repository done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="631" y="310" key="Github.ShareDialog" timestamp="1606136293606">
@@ -356,6 +379,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1606391607992" />
+    <state x="557" y="123" key="RollbackChangesDialog" timestamp="1606408613916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="557" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606408613916" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1606139270475">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -364,10 +391,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606397508443" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606396501734">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606404697866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606396501734" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606404697866" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606393056637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
