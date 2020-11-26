@@ -31,6 +31,7 @@ namespace Repository
         {
             context.Entry(entity).State = entity.Id == default ? EntityState.Added : EntityState.Modified;
             context.SaveChanges();
+            
             return entity.Id;
         }
 

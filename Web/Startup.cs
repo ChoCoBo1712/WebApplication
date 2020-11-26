@@ -26,7 +26,8 @@ namespace Web
         public void ConfigureServices(IServiceCollection services)
         {
             Configuration.Bind("Project", new Config());
-            services.AddDbContext<ApplicationDbContext>(x => x.UseNpgsql(Config.ConnectionString), ServiceLifetime.Transient);
+            services.AddDbContext<ApplicationDbContext>(x => 
+                x.UseNpgsql(Config.ConnectionString), ServiceLifetime.Transient);
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -40,7 +41,8 @@ namespace Web
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context => { await context.Response.WriteAsync("Hello World!"); });
+                endpoints.MapGet("/", async context => 
+                    { await context.Response.WriteAsync("Hello World!"); });
             });
         }
     }
