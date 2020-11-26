@@ -4,10 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
 {
-    public class Song
+    public class Song: BaseEntity
     {
-        [Required] public int Id { get; set; }
-
         [Required] public string Name { get; set; }
 
         [Required] public Album Album { get; set; }

@@ -7,9 +7,11 @@
       <e p="Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="IRepository.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Album.cs" t="Include" />
           <e p="Artist.cs" t="Include" />
+          <e p="BaseEntity.cs" t="Include" />
           <e p="Song.cs" t="Include" />
           <e p="Tag.cs" t="Include" />
           <e p="User.cs" t="Include" />
@@ -47,17 +49,16 @@
         </e>
         <e p="Repository.csproj" t="IncludeRecursive" />
       </e>
-      <e p="Services" t="IncludeRecursive">
+      <e p="Service" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="Services.AssemblyInfo.cs" t="Include" />
+              <e p="Service.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="Services.csproj" t="IncludeRecursive" />
+        <e p="Service.csproj" t="IncludeRecursive" />
       </e>
       <e p="Web" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />

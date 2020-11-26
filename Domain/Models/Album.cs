@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
 {
-    public class Album
+    public class Album: BaseEntity
     {
-        [Required] public int Id { get; set; }
-
         [Required] public string Name { get; set; }
         
         [Required] public string Picture { get; set; }
