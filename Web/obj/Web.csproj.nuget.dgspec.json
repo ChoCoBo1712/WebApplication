@@ -4,6 +4,63 @@
     "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Web\\Web.csproj": {}
   },
   "projects": {
+    "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\BigBe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\BigBe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +88,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

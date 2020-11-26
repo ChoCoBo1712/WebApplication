@@ -6,9 +6,9 @@ namespace Domain
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        List<T> GetAllEntities();
-        T GetEntity(int id);
-        int SaveEntity(T entity);
-        void DeleteEntity(int id);
+        IEnumerable<T> GetAll();
+        T Get(int id);
+        int Save(T entity);
+        void Delete(int id);
     }
 }

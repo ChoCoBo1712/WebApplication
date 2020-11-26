@@ -1,16 +1,16 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Repository.Models;
 
 namespace Repository
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext: IdentityDbContext<EFUser, EFUserRole, int>
     {
-        public DbSet<EFSong> Songs { get; set; }
-        public DbSet<EFArtist> Artists { get; set; }
-        public DbSet<EFAlbum> Albums { get; set; }
-        public DbSet<EFTag> Tags { get; set; }
-        public DbSet<EFUser> Users { get; set; }
-        
+        // public DbSet<EFSong> Songs { get; set; }
+        // public DbSet<EFArtist> Artists { get; set; }
+        // public DbSet<EFAlbum> Albums { get; set; }
+        // public DbSet<EFTag> Tags { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

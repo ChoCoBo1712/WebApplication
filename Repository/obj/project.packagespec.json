@@ -19,7 +19,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\Domain.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
