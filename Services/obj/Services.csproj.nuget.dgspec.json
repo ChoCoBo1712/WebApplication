@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj": {}
+    "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj": {
+    "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj",
-        "projectName": "Repository",
-        "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\BigBe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet",
@@ -42,16 +42,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
