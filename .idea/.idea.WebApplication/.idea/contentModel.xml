@@ -29,6 +29,7 @@
       <e p="Repository" t="IncludeRecursive">
         <e p="ApplicationDbContext.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="MappingProfile.cs" t="Include" />
         <e p="Migrations" t="Include">
           <e p="20201125201901_init.cs" t="Include" />
           <e p="20201125201901_init.Designer.cs" t="Include" />
@@ -49,7 +50,12 @@
             </e>
           </e>
         </e>
-        <e p="Repository.cs" t="Include" />
+        <e p="Repositories" t="Include">
+          <e p="AlbumRepository.cs" t="Include" />
+          <e p="ArtistRepository.cs" t="Include" />
+          <e p="SongRepository.cs" t="Include" />
+          <e p="TagRepository.cs" t="Include" />
+        </e>
         <e p="Repository.csproj" t="IncludeRecursive" />
       </e>
       <e p="Service" t="IncludeRecursive">
@@ -80,6 +86,7 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="Web.AssemblyInfo.cs" t="Include" />
+              <e p="Web.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>

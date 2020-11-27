@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "N8kIMuevQ/ZHFdvOmVelmJN44UVchW4qUT4h7ffpZW67KYk7Q7er6FD1f2Pc1Gt2/3bL1Ujvso4H5kmi5rv+/g==",
+  "dgSpecHash": "HwstXu75LGNPP9tWydmuYN0JLMTCVzy6nhq4bAdPPXs0BBvBGQQ4f8oT2VODGlyXsq4COq3a+paqXI8yBBT8kw==",
   "success": true,
   "projectFilePath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Web\\Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\BigBe\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",
@@ -30,6 +31,7 @@
     "C:\\Users\\BigBe\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\BigBe\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\BigBe\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []

@@ -8,11 +8,25 @@
     ".NETCoreApp,Version=v3.1": {
       "Repository/1.0.0": {
         "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.0"
         },
         "runtime": {
           "Repository.dll": {}
+        }
+      },
+      "AutoMapper/10.1.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.1.1.0"
+          }
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.0": {
@@ -46,6 +60,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.EntityFrameworkCore/5.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "5.0.0",
@@ -260,7 +275,13 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.6.0": {}
+      "System.Reflection.Emit/4.7.0": {},
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -268,6 +289,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/10.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "path": "automapper/10.1.1",
+      "hashPath": "automapper.10.1.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.0": {
       "type": "package",
@@ -289,6 +317,13 @@
       "sha512": "sha512-AfAFu+ndWsohAwIdek489Xi0kAAKQ8j6x/Q1e3sAHpfy9Keraj6tPp0tpjh8VeQJb1TlMcuiqJGxatgEGiN1IA==",
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/5.0.0",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/5.0.0": {
       "type": "package",
@@ -430,12 +465,24 @@
       "path": "system.diagnostics.diagnosticsource/5.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
     },
+    "System.Reflection.Emit/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/4.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
       "path": "system.runtime.compilerservices.unsafe/4.6.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

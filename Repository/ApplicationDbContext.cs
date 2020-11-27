@@ -6,15 +6,17 @@ namespace Repository
 {
     public class ApplicationDbContext: IdentityDbContext<EFUser, EFUserRole, int>
     {
-        // public DbSet<EFSong> Songs { get; set; }
-        // public DbSet<EFArtist> Artists { get; set; }
-        // public DbSet<EFAlbum> Albums { get; set; }
-        // public DbSet<EFTag> Tags { get; set; }
+        public DbSet<EFSong> Songs { get; set; }
+        public DbSet<EFArtist> Artists { get; set; }
+        public DbSet<EFAlbum> Albums { get; set; }
+        public DbSet<EFTag> Tags { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            
             modelBuilder.Entity<EFSong>()
                 .HasOne(s => s.Album)
                 .WithMany(a => a.Songs)

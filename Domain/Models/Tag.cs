@@ -9,6 +9,6 @@ namespace Domain.Models
         
         [Required] public string Description { get; set; }
         
-        [Required] public List<Song> Songs { get; set; }
+        public List<Song> Songs { get; set; }
     }
 }

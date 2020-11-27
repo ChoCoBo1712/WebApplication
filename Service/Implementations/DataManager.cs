@@ -1,9 +1,10 @@
 using Domain;
 using Domain.Models;
+using Service.Interfaces;
 
 namespace Service.Implementations
 {
-    public class DataManager
+    public class DataManager : IDataManager
     {
         public IRepository<Song> SongRepository { get; set; }
         public IRepository<Album> AlbumRepository { get; set; }

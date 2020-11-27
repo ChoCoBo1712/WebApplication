@@ -27,6 +27,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Repository": "1.0.0",
+          "Service": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -218,7 +219,7 @@
           "System.ObjectModel": "4.1.2.0",
           "System.Reflection.DispatchProxy": "4.0.6.0",
           "System.Reflection": "4.2.2.0",
-          "System.Reflection.Emit": "4.1.2.0",
+          "System.Reflection.Emit.Reference": "4.1.2.0",
           "System.Reflection.Emit.ILGeneration": "4.1.1.0",
           "System.Reflection.Emit.Lightweight": "4.1.1.0",
           "System.Reflection.Extensions": "4.1.2.0",
@@ -299,6 +300,21 @@
         },
         "compile": {
           "Web.dll": {}
+        }
+      },
+      "AutoMapper/10.1.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -634,9 +650,20 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
+      "System.Reflection.Emit/4.7.0": {},
       "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
+        },
+        "compile": {
+          "Domain.dll": {}
+        }
+      },
       "Repository/1.0.0": {
         "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.0"
         },
@@ -645,6 +672,17 @@
         },
         "compile": {
           "Repository.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Service.dll": {}
+        },
+        "compile": {
+          "Service.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -1793,7 +1831,7 @@
         },
         "compileOnly": true
       },
-      "System.Reflection.Emit/4.1.2.0": {
+      "System.Reflection.Emit.Reference/4.1.2.0": {
         "compile": {
           "System.Reflection.Emit.dll": {}
         },
@@ -2251,6 +2289,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/10.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "path": "automapper/10.1.1",
+      "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
@@ -2433,6 +2478,13 @@
       "path": "system.diagnostics.diagnosticsource/5.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
     },
+    "System.Reflection.Emit/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/4.6.0": {
       "type": "package",
       "serviceable": true,
@@ -2440,7 +2492,17 @@
       "path": "system.runtime.compilerservices.unsafe/4.6.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
     },
+    "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3400,7 +3462,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Reflection.Emit/4.1.2.0": {
+    "System.Reflection.Emit.Reference/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

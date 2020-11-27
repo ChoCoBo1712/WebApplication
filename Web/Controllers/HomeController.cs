@@ -17,7 +17,7 @@ namespace Web.Controllers
         
         public IActionResult Index()
         {
-            List<Song> songs = dataManager.SongRepository.GetAll().ToList();
+            List<Song> songs = dataManager.SongRepository.GetAll();
             return View(songs);
         }
     }

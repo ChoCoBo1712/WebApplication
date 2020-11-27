@@ -1,0 +1,9 @@
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Users\BigBe\RiderProjects\WebApplication\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
