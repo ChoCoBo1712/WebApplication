@@ -34,9 +34,9 @@ namespace Web
             services.AddDbContext<ApplicationDbContext>(x => 
                 x.UseNpgsql(Config.ConnectionString), ServiceLifetime.Transient);
             services.AddScoped<IRepository<Song>, SongRepository>();
-            // services.AddScoped<IRepository<Album>, AlbumRepository>();
-            // services.AddScoped<IRepository<Artist>, ArtistRepository>();
-            // services.AddScoped<IRepository<Tag>, TagRepository>();
+            services.AddScoped<IRepository<Album>, AlbumRepository>();
+            services.AddScoped<IRepository<Artist>, ArtistRepository>();
+            services.AddScoped<IRepository<Tag>, TagRepository>();
             services.AddScoped<IDataManager, DataManager>();
             services.AddControllersWithViews();
             var mapperConfig = new MapperConfiguration(cfg =>
@@ -44,6 +44,7 @@ namespace Web
                 cfg.AddProfile(new MappingProfile());
             });
             services.AddSingleton(typeof(IMapper), mapperConfig.CreateMapper());
+            services.AddScoped<IPopulator>(t => new Populator(t.GetRequiredService<IDataManager>()));
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -26,7 +26,7 @@ namespace Repository
             foreach (var pair in efSongs.Zip(songs, 
                 (efSong, song) => new { EFSong = efSong, Song = song }))
             {
-                pair.Song.Album = mapper.Map<Album>(context.Albums.FirstOrDefault(t => t.Id == pair.EFSong.Album.Id));
+                pair.Song.Album = mapper.Map<Album>(context.Albums.FirstOrDefault(t => t.Id == pair.EFSong.AlbumId));
                 pair.Song.Tags = mapper.Map<List<Tag>>(context.Tags.Where(t => t.Id == pair.EFSong.Id));
             }
 
@@ -49,9 +49,10 @@ namespace Repository
 
         public int Save(Song song)
         {
-            var efSong = mapper.Map<Song>(song);
-            efSong.Album = mapper.Map<Album>(context.Albums.FirstOrDefault(t => t.Id == song.Album.Id));
-            efSong.Tags = mapper.Map<List<Tag>>(context.Tags.Where(t => t.Id == song.Id));
+            var efSong = mapper.Map<EFSong>(song);
+            efSong.Album = mapper.Map<EFAlbum>(context.Albums.FirstOrDefault(t => t.Id == song.Album.Id));
+            efSong.Tags = mapper.Map<List<EFTag>>(context.Tags.Where(t => t.Id == song.Id));
+            efSong.AlbumId = song.Album.Id;
             context.Entry(efSong).State = efSong.Id == default ? EntityState.Added : EntityState.Modified;
             context.SaveChanges();
             

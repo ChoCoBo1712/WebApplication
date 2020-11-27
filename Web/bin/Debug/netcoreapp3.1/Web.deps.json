@@ -676,7 +676,8 @@
       },
       "Service/1.0.0": {
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "Repository": "1.0.0"
         },
         "runtime": {
           "Service.dll": {}

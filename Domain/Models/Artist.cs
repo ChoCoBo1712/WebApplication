@@ -11,6 +11,6 @@ namespace Domain.Models
         
         [Required] public string Description { get; set; }
         
-        [Required] public List<Album> Albums { get; set; }
+        public List<Album> Albums { get; set; }
     }
 }

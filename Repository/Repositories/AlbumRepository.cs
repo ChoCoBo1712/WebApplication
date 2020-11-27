@@ -4,6 +4,7 @@ using AutoMapper;
 using Domain;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Repository.Models;
 
 namespace Repository
 {
@@ -48,9 +49,10 @@ namespace Repository
     
         public int Save(Album album)
         {
-            var efAlbum = mapper.Map<Album>(album);
-            efAlbum.Artist = mapper.Map<Artist>(context.Artists.FirstOrDefault(t => t.Id == album.Id));
-            efAlbum.Songs = mapper.Map<List<Song>>(context.Songs.Where(t => t.Id == album.Id));
+            var efAlbum = mapper.Map<EFAlbum>(album);
+            efAlbum.Artist = mapper.Map<EFArtist>(context.Artists.FirstOrDefault(t => t.Id == album.Id));
+            efAlbum.Songs = mapper.Map<List<EFSong>>(context.Songs.Where(t => t.Id == album.Id));
+            efAlbum.ArtistId = album.Artist.Id;
             context.Entry(efAlbum).State = efAlbum.Id == default ? EntityState.Added : EntityState.Modified;
             context.SaveChanges();
             

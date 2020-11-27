@@ -4,6 +4,7 @@ using AutoMapper;
 using Domain;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Repository.Models;
 
 namespace Repository
 {
@@ -46,8 +47,8 @@ namespace Repository
     
         public int Save(Tag tag)
         {
-            var efTag = mapper.Map<Tag>(tag);
-            efTag.Songs= mapper.Map<List<Song>>(context.Songs.Where(t => t.Id == tag.Id));
+            var efTag = mapper.Map<EFTag>(tag);
+            efTag.Songs= mapper.Map<List<EFSong>>(context.Songs.Where(t => t.Id == tag.Id));
             context.Entry(efTag).State = efTag.Id == default ? EntityState.Added : EntityState.Modified;
             context.SaveChanges();
             

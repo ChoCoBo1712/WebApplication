@@ -373,7 +373,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "Repository": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Service.dll": {}

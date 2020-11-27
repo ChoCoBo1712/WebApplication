@@ -12,21 +12,20 @@
     <title>Index</title>
 </head>
 <body>
-<h4>Customers</h4>
+<h4>Songs</h4>
 <hr/>
 <table cellpadding="0" cellspacing="0">
     <tr>
-        <th>CustomerID</th>
-        <th>ContactName</th>
-        <th>City</th>
-        <th>Country</th>
+        <th>SongID</th>
+        <th>Name</th>
+        <th>Album</th>
     </tr>
     @foreach (Song song in Model)
     {
         <tr>
             <td>@song.Id</td>
             <td>@song.Name</td>
-            <td>@song.Album</td>
+            <td>@song.Album.Name</td>
         </tr>
     }
 </table>
