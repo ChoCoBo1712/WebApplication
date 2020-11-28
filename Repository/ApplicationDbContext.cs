@@ -1,10 +1,11 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Repository.Models;
 
 namespace Repository
 {
-    public class ApplicationDbContext: IdentityDbContext<EFUser, EFUserRole, int>
+    public class ApplicationDbContext: IdentityDbContext<IdentityUser<int>, IdentityRole<int>, int>
     {
         public DbSet<EFSong> Songs { get; set; }
         public DbSet<EFArtist> Artists { get; set; }

@@ -1,35 +1,28 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Web.ViewModels.Auth
+namespace Web.ViewModels.Account
 {
-    public class SignUpViewModel
+    public class RegisterViewModel
     {
         [Required]
         [Display(Name = "Username")]
-        public string Username { get; set; }
-        
-        [Required]
-        [Display(Name = "First name")]
-        public string Name { get; set; }
+        public string UserName { get; set; }
 
-        [Required]
-        [Display(Name = "Last name")]
-        public string Surname { get; set; }
-        
         [Required]
         [Display(Name = "Password")]
         [StringLength(64, MinimumLength = 8, ErrorMessage = "Passwords must be at least 8 characters.")]
         public string Password { get; set; }
         
+        [Compare("Password", ErrorMessage = "Passwords do not match")]
         [Display(Name = "Confirm password")]
-        public string ConfirmPassword { get; set; }
+        public string PasswordConfirm { get; set; }
         
         [Display(Name = "Email")]
         [EmailAddress(ErrorMessage = "Invalid email address")]
         public string Email { get; set; }
         
+        [Compare("Email", ErrorMessage = "Emails do not match")]
         [Display(Name = "ConfirmEmail")]
-        [EmailAddress(ErrorMessage = "Invalid email address")]
-        public string ConfirmEmail { get; set; }
+        public string EmailConfirm { get; set; }
     }
 }

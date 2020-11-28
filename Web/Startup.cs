@@ -53,7 +53,7 @@ namespace Web
             services.AddScoped<IPopulator>(t => new Populator(t.GetRequiredService<IDataManager>()));
             
             //Identity
-            services.AddIdentity<EFUser, EFUserRole>(options =>
+            services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
                 {
                     options.User.RequireUniqueEmail = true;
                     options.Password.RequiredLength = 8;
@@ -63,9 +63,9 @@ namespace Web
                     options.Password.RequireDigit = false;
                 })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders()
-                .AddUserStore<UserStore<EFUser, EFUserRole, ApplicationDbContext, int>>()
-                .AddRoleStore<RoleStore<EFUserRole, ApplicationDbContext, int>>();
+                .AddDefaultTokenProviders();
+            // .AddUserStore<UserStore<EFUser, EFUserRole, ApplicationDbContext, int>>()
+            // .AddRoleStore<RoleStore<EFUserRole, ApplicationDbContext, int>>();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -86,6 +86,7 @@ namespace Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=home}/{action=index}");
+                // endpoints.MapControllerRoute("default", "{controller=account}/{action=register}");
             });
         }
     }

@@ -33,6 +33,8 @@
         <e p="Migrations" t="Include">
           <e p="20201125201901_init.cs" t="Include" />
           <e p="20201125201901_init.Designer.cs" t="Include" />
+          <e p="20201128123643_'users'.cs" t="Include" />
+          <e p="20201128123643_'users'.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -83,6 +85,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -102,12 +105,16 @@
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="ViewModels" t="Include">
-          <e p="Auth" t="Include">
-            <e p="SignInViewModel.cs" t="Include" />
-            <e p="SignUpViewModel.cs" t="Include" />
+          <e p="Account" t="Include">
+            <e p="LoginViewModel.cs" t="Include" />
+            <e p="RegisterViewModel.cs" t="Include" />
           </e>
         </e>
         <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="Account" t="Include">
+            <e p="Register.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>

@@ -1,12 +1,12 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Web.ViewModels.Auth
+namespace Web.ViewModels.Account
 {
-    public class SignInViewModel
+    public class LoginViewModel
     {
         [Required]
         [Display(Name = "Username")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
         
         [Required]
         [Display(Name = "Password")]

@@ -56,7 +56,9 @@ C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Web.Razo
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Web.TagHelpers.input.cache
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Web.TagHelpers.output.cache
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Web.RazorCoreGenerate.cache
-C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Web.RazorTargetAssemblyInfo.cs
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Web.Views.pdb
 C:\Users\BigBe\RiderProjects\WebApplication\Web\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs

@@ -20,6 +20,7 @@ using Domain.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fd4313c69a4073128c6858875e07256ec4bcbf90", @"/Views/Home/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c66e443ba81bfd444e2b1c1ae94c4deedf2b8d44", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Domain.Models.Song>>
     {
         #line hidden
@@ -57,7 +58,7 @@ using Domain.Models;
 #line hidden
 #nullable disable
             WriteLiteral(" \r\n<!DOCTYPE html>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd4313c69a4073128c6858875e07256ec4bcbf903114", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd4313c69a4073128c6858875e07256ec4bcbf903278", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\"/>\r\n    <title>Index</title>\r\n");
             }
             );
@@ -71,7 +72,7 @@ using Domain.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd4313c69a4073128c6858875e07256ec4bcbf904172", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd4313c69a4073128c6858875e07256ec4bcbf904336", async() => {
                 WriteLiteral("\r\n<h4>Songs</h4>\r\n<hr/>\r\n<table cellpadding=\"0\" cellspacing=\"0\">\r\n    <tr>\r\n        <th>SongID</th>\r\n        <th>Name</th>\r\n        <th>Album</th>\r\n    </tr>\r\n");
 #nullable restore
 #line 23 "C:\Users\BigBe\RiderProjects\WebApplication\Web\Views\Home\Index.cshtml"
