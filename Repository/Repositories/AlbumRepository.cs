@@ -50,10 +50,17 @@ namespace Repository
         public int Save(Album album)
         {
             var efAlbum = mapper.Map<EFAlbum>(album);
-            efAlbum.Artist = mapper.Map<EFArtist>(context.Artists.FirstOrDefault(t => t.Id == album.Id));
-            efAlbum.Songs = mapper.Map<List<EFSong>>(context.Songs.Where(t => t.Id == album.Id));
-            efAlbum.ArtistId = album.Artist.Id;
-            context.Entry(efAlbum).State = efAlbum.Id == default ? EntityState.Added : EntityState.Modified;
+            
+            if (efAlbum.Id == default)
+            {
+                context.Entry(efAlbum).State = EntityState.Added;
+            }
+            else
+            {
+                var entry = context.Albums.First(t => t.Id == efAlbum.Id);
+                context.Entry(entry).State = EntityState.Detached;
+                context.Entry(efAlbum).State = EntityState.Modified;
+            }
             context.SaveChanges();
             
             return efAlbum.Id;

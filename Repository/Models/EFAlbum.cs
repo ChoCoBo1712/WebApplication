@@ -8,7 +8,7 @@ namespace Repository.Models
 
         public string Name { get; set; }
         
-        public string Picture { get; set; }
+        public string ImagePath { get; set; }
         
         public EFArtist Artist { get; set; }
         

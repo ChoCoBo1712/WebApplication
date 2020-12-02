@@ -1,0 +1,30 @@
+@model IEnumerable<Domain.Models.Album>
+@{
+    ViewBag.Title = "Albums list";
+}
+ 
+<a href="/admin/albums/create">Add album</a>
+ 
+<table class="table">
+    <tr><th>Name</th><th>Image</th><th>Artist</th><th>Actions</th></tr>
+    @foreach (var album in Model)
+    {
+        <tr>
+            <td>@album.Name</td>
+            <td>
+                <img src="~/img/albums/@album.ImagePath" width="40" height="40">
+            </td>
+            <td>
+                @album.Artist.Name
+            </td>
+            <td>
+                <form action="/admin/albums/delete?id=@album.Id" method="post">
+                    <a class="btn btn-sm btn-primary" href="/admin/albums/edit?id=@album.Id">Edit</a>
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

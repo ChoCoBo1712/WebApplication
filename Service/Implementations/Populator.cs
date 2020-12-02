@@ -21,14 +21,14 @@ namespace Service.Implementations
             {
                 Name = "PerformanceArtist",
                 Description = "Are not ashamed of our dicks",
-                Picture = "*shit*"
+                ImagePath = "*shit*"
             };
             int artistId = manager.ArtistRepository.Save(artist);
 
             Album album = new Album
             {
                 Name = "GACHI",
-                Picture = "*dick*",
+                ImagePath = "*dick*",
                 Artist = manager.ArtistRepository.Get(artistId)
             };
             int albumId = manager.AlbumRepository.Save(album);

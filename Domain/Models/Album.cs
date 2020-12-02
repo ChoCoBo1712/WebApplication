@@ -7,7 +7,7 @@ namespace Domain.Models
     {
         [Required] public string Name { get; set; }
         
-        [Required] public string Picture { get; set; }
+        [Required] public string ImagePath { get; set; }
         
         [Required] public Artist Artist { get; set; }
 

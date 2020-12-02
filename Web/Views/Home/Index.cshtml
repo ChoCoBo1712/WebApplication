@@ -1,8 +1,17 @@
 @using Domain.Models
 @model IEnumerable<Domain.Models.Song>
  
-@{
-    Layout = null;
+@if(User.Identity.IsAuthenticated)
+{
+    <p>@User.Identity.Name</p>
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Logout" />
+    </form>
+}
+else
+{
+    <a asp-controller="Account" asp-action="Login">Login</a>
+    <a asp-controller="Account" asp-action="Register">Register</a>
 }
  
 <!DOCTYPE html>

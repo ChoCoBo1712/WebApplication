@@ -1,0 +1,19 @@
+@model Web.Areas.Admin.ViewModels.SongViewModel
+@{
+    ViewBag.Title = "Adding song";
+}
+
+<form action="/admin/songs/create" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="AlbumId" class="control-label">Album</label>
+        <select asp-for="AlbumId" asp-items="@(new SelectList(ViewBag.Albums, "Id",dataTextField: "Name"))" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-outline-secondary" />
+    </div>
+</form>

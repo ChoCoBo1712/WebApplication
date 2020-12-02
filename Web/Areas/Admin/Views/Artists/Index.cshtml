@@ -1,0 +1,27 @@
+@model IEnumerable<Domain.Models.Artist>
+@{
+    ViewBag.Title = "Artists list";
+}
+ 
+<a href="/admin/artists/create">Add artist</a>
+ 
+<table class="table">
+    <tr><th>Name</th><th>Image</th><th>Actions</th></tr>
+    @foreach (var artist in Model)
+    {
+        <tr>
+            <td>@artist.Name</td>
+            <td>
+                <img src="~/img/artists/@artist.ImagePath" width="40" height="40">
+            </td>
+            <td>
+                <form action="/admin/artists/delete?id=@artist.Id" method="post">
+                    <a class="btn btn-sm btn-primary" href="/admin/artists/edit?id=@artist.Id">Edit</a>
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

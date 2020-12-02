@@ -35,6 +35,8 @@
           <e p="20201125201901_init.Designer.cs" t="Include" />
           <e p="20201128123643_'users'.cs" t="Include" />
           <e p="20201128123643_'users'.Designer.cs" t="Include" />
+          <e p="20201201195230_'name'.cs" t="Include" />
+          <e p="20201201195230_'name'.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -64,10 +66,14 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Implementations" t="Include">
           <e p="DataManager.cs" t="Include" />
+          <e p="EmailService.cs" t="Include" />
+          <e p="ImageService.cs" t="Include" />
           <e p="Populator.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
           <e p="IDataManager.cs" t="Include" />
+          <e p="IEmailService.cs" t="Include" />
+          <e p="IImageService.cs" t="Include" />
           <e p="IPopulator.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -83,7 +89,56 @@
         <e p="Admin" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
+        <e p="Areas" t="Include">
+          <e p="Admin" t="Include">
+            <e p="Controllers" t="Include">
+              <e p="AlbumsController.cs" t="Include" />
+              <e p="ArtistsController.cs" t="Include" />
+              <e p="ModelsController.cs" t="Include" />
+              <e p="SongsController.cs" t="Include" />
+              <e p="TagsController.cs" t="Include" />
+            </e>
+            <e p="ViewModels" t="Include">
+              <e p="AlbumViewModel.cs" t="Include" />
+              <e p="ArtistViewModel.cs" t="Include" />
+              <e p="SongViewModel.cs" t="Include" />
+              <e p="TagViewModel.cs" t="Include" />
+            </e>
+            <e p="Views" t="Include">
+              <e p="_ViewImports.cshtml" t="Include" />
+              <e p="Albums" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Artists" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Models" t="Include">
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Songs" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Tags" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Configs" t="Include">
+          <e p="AllowedExtensions.cs" t="Include" />
+          <e p="Config.cs" t="Include" />
+          <e p="GoogleConfig.cs" t="Include" />
+          <e p="MailConfig.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
@@ -100,9 +155,6 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
-        <e p="Services" t="Include">
-          <e p="Config.cs" t="Include" />
-        </e>
         <e p="Startup.cs" t="Include" />
         <e p="ViewModels" t="Include">
           <e p="Account" t="Include">
@@ -113,6 +165,8 @@
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="Account" t="Include">
+            <e p="Error.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
           </e>
           <e p="Home" t="Include">
@@ -120,6 +174,16 @@
           </e>
         </e>
         <e p="Web.csproj" t="IncludeRecursive" />
+        <e p="wwwroot" t="Include">
+          <e p="img" t="Include">
+            <e p="Albums" t="Include">
+              <e p="4641fc5a-c8eb-4301-9f9d-1bd0ccf1a849_gachi-production-and-trade-joint-stock-company-logo-2047.png" t="Include" />
+            </e>
+            <e p="Artists" t="Include">
+              <e p="32989b88-99a2-4bb4-b5f1-b1a880840af4_Снимок экрана 2020-11-24 183432.png" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="WebApplication.sln" t="IncludeFlat" />
     </e>

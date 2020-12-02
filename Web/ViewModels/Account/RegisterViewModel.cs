@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Web.ViewModels.Account
 {
@@ -24,5 +26,9 @@ namespace Web.ViewModels.Account
         [Compare("Email", ErrorMessage = "Emails do not match")]
         [Display(Name = "ConfirmEmail")]
         public string EmailConfirm { get; set; }
+
+        public string ReturnUrl { get; set; }
+        
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
     }
 }

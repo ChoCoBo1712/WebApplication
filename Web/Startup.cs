@@ -18,7 +18,7 @@ using Repository;
 using Repository.Models;
 using Service.Implementations;
 using Service.Interfaces;
-using Web.Services;
+using Web.Configs;
 
 namespace Web
 {
@@ -33,17 +33,20 @@ namespace Web
         
         public void ConfigureServices(IServiceCollection services)
         {
-            //DB
+            //DB and configs
             Configuration.Bind("Project", new Config());
-            services.AddDbContext<ApplicationDbContext>(x => 
-                x.UseNpgsql(Config.ConnectionString), ServiceLifetime.Transient);
+            Configuration.Bind("Mailing", new MailConfig());
+            Configuration.Bind("Google", new GoogleConfig());
+            services.AddDbContext<ApplicationDbContext>(t => 
+                t.UseNpgsql(Config.ConnectionString), ServiceLifetime.Transient);
             
-            //Data
+            //Data and services
             services.AddScoped<IRepository<Song>, SongRepository>();
             services.AddScoped<IRepository<Album>, AlbumRepository>();
             services.AddScoped<IRepository<Artist>, ArtistRepository>();
             services.AddScoped<IRepository<Tag>, TagRepository>();
             services.AddScoped<IDataManager, DataManager>();
+            services.AddScoped<IImageService, ImageService>();
             services.AddControllersWithViews();
             var mapperConfig = new MapperConfiguration(cfg =>
             {
@@ -51,8 +54,11 @@ namespace Web
             });
             services.AddSingleton(typeof(IMapper), mapperConfig.CreateMapper());
             services.AddScoped<IPopulator>(t => new Populator(t.GetRequiredService<IDataManager>()));
+            services.AddScoped<IEmailService>(t => new EmailService(
+                MailConfig.Sender, MailConfig.SmtpServer, MailConfig.SmtpPort, MailConfig.Username, MailConfig.Password
+            ));
             
-            //Identity
+            //Authentication
             services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
                 {
                     options.User.RequireUniqueEmail = true;
@@ -64,6 +70,11 @@ namespace Web
                 })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                options.ClientId = GoogleConfig.ClientId;
+                options.ClientSecret = GoogleConfig.ClientSecret;
+            });
             // .AddUserStore<UserStore<EFUser, EFUserRole, ApplicationDbContext, int>>()
             // .AddRoleStore<RoleStore<EFUserRole, ApplicationDbContext, int>>();
         }
@@ -76,7 +87,7 @@ namespace Web
             }
 
             // app.UseHttpsRedirection();
-            // app.UseStaticFiles();
+            app.UseStaticFiles();
  
             app.UseRouting();
  
@@ -86,6 +97,7 @@ namespace Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=home}/{action=index}");
+                endpoints.MapControllerRoute("admin", "{area:exists}/{controller=models}/{action=index}");
                 // endpoints.MapControllerRoute("default", "{controller=account}/{action=register}");
             });
         }

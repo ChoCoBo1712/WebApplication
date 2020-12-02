@@ -1,0 +1,24 @@
+@model IEnumerable<Domain.Models.Tag>
+@{
+    ViewBag.Title = "Tags list";
+}
+ 
+<a href="/admin/tags/create">Add tag</a>
+ 
+<table class="table">
+    <tr><th>Name</th><th>Actions</th></tr>
+    @foreach (var tag in Model)
+    {
+        <tr>
+            <td>@tag.Name</td>
+            <td>
+                <form action="/admin/tags/delete?id=@tag.Id" method="post">
+                    <a class="btn btn-sm btn-primary" href="/admin/tags/edit?id=@tag.Id">Edit</a>
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

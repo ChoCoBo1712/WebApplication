@@ -1,0 +1,30 @@
+@model IEnumerable<Domain.Models.Song>
+@{
+    ViewBag.Title = "Songs list";
+}
+ 
+<a href="/admin/songs/create">Add song</a>
+ 
+<table class="table">
+    <tr><th>Name</th><th>Album</th><th>Artist</th><th>Actions</th></tr>
+    @foreach (var song in Model)
+    {
+        <tr>
+            <td>@song.Name</td>
+            <td>
+                @song.Album.Name
+            </td>
+            <td>
+                @song.Album.Artist.Name
+            </td>
+            <td>
+                <form action="/admin/songs/delete?id=@song.Id" method="post">
+                    <a class="btn btn-sm btn-primary" href="/admin/songs/edit?id=@song.Id">Edit</a>
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

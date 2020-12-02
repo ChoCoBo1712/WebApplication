@@ -26,7 +26,7 @@ namespace Repository
             foreach (var pair in efArtist.Zip(artist, 
                 (efArtist, artist) => new { EFArtist = efArtist, Artist = artist }))
             {
-                pair.Artist.Albums = mapper.Map<List<Album>>(context.Albums.Where(t => t.Id == pair.EFArtist.Id));
+                pair.Artist.Albums = mapper.Map<List<Album>>(context.Albums.Where(t => t.ArtistId == pair.EFArtist.Id));
             }
 
             return artist; 
@@ -48,8 +48,17 @@ namespace Repository
         public int Save(Artist artist)
         {
             var efArtist = mapper.Map<EFArtist>(artist);
-            efArtist.Albums= mapper.Map<List<EFAlbum>>(context.Artists.Where(t => t.Id == artist.Id));
-            context.Entry(efArtist).State = efArtist.Id == default ? EntityState.Added : EntityState.Modified;
+
+            if (efArtist.Id == default)
+            {
+                context.Entry(efArtist).State = EntityState.Added;
+            }
+            else
+            {
+                var entry = context.Artists.First(t => t.Id == efArtist.Id);
+                context.Entry(entry).State = EntityState.Detached;
+                context.Entry(efArtist).State = EntityState.Modified;
+            }
             context.SaveChanges();
             
             return efArtist.Id;

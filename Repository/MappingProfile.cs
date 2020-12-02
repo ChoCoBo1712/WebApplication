@@ -19,23 +19,23 @@ namespace Repository
             CreateMap<EFAlbum, Album>()
                 .ForMember("Id", t => t.MapFrom(t => t.Id))
                 .ForMember("Name", t => t.MapFrom(t => t.Name))
-                .ForMember("Picture", t => t.MapFrom(t => t.Picture));
+                .ForMember("ImagePath", t => t.MapFrom(t => t.ImagePath));
 
             CreateMap<Album, EFAlbum>()
                 .ForMember("Id", t => t.MapFrom(t => t.Id))
                 .ForMember("Name", t => t.MapFrom(t => t.Name))
-                .ForMember("Picture", t => t.MapFrom(t => t.Picture));
+                .ForMember("ImagePath", t => t.MapFrom(t => t.ImagePath));
 
             CreateMap<EFArtist, Artist>()
                 .ForMember("Id", t => t.MapFrom(t => t.Id))
                 .ForMember("Name", t => t.MapFrom(t => t.Name))
-                .ForMember("Picture", t => t.MapFrom(t => t.Picture))
+                .ForMember("ImagePath", t => t.MapFrom(t => t.ImagePath))
                 .ForMember("Description", t => t.MapFrom(t => t.Description));
 
             CreateMap<Artist, EFArtist>()
                 .ForMember("Id", t => t.MapFrom(t => t.Id))
                 .ForMember("Name", t => t.MapFrom(t => t.Name))
-                .ForMember("Picture", t => t.MapFrom(t => t.Picture))
+                .ForMember("ImagePath", t => t.MapFrom(t => t.ImagePath))
                 .ForMember("Description", t => t.MapFrom(t => t.Description));
             
             CreateMap<EFTag, Tag>()

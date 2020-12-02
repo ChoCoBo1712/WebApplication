@@ -1,33 +1,45 @@
 @model Web.ViewModels.Account.RegisterViewModel
-<h2>User Registration</h2>
-<form method="post" asp-controller="Account" asp-action="Register">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div>
+
+<div>
+    <h2>User Registration</h2>
+    <form method="post" asp-controller="Account" asp-action="Register" asp-route-returnUrl="@Model.ReturnUrl">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
             <label asp-for="UserName"></label><br />
             <input asp-for="UserName" />
             <span asp-validation-for="UserName"></span>
         </div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
+        <div>
+            <label asp-for="Email"></label><br />
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
             <label asp-for="EmailConfirm"></label><br />
             <input asp-for="EmailConfirm" />
             <span asp-validation-for="EmailConfirm"></span>
         </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    <div>
-        <label asp-for="PasswordConfirm"></label><br />
-        <input asp-for="PasswordConfirm" />
-        <span asp-validation-for="PasswordConfirm"></span>
-    </div>
-    <div>
-        <input type="submit" value="Registration" />
-    </div>
-</form>
+        <div>
+            <label asp-for="Password"></label><br />
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label asp-for="PasswordConfirm"></label><br />
+            <input asp-for="PasswordConfirm" />
+            <span asp-validation-for="PasswordConfirm"></span>
+        </div>
+        <div>
+            <input type="submit" value="Registration" />
+        </div>
+    </form>
+    <h2>External User Login</h2>
+    <form method="post" asp-controller="Account" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
+        <div>
+            @foreach (var provider in Model.ExternalLogins)
+            {
+                <input type="submit" name="provider" value="@provider.Name" title="Login using your @provider.DisplayName account"/>
+            }
+        </div>
+        </form>
+</div>

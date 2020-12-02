@@ -48,8 +48,17 @@ namespace Repository
         public int Save(Tag tag)
         {
             var efTag = mapper.Map<EFTag>(tag);
-            efTag.Songs= mapper.Map<List<EFSong>>(context.Songs.Where(t => t.Id == tag.Id));
-            context.Entry(efTag).State = efTag.Id == default ? EntityState.Added : EntityState.Modified;
+            
+            if (efTag.Id == default)
+            {
+                context.Entry(efTag).State = EntityState.Added;
+            }
+            else
+            {
+                var entry = context.Tags.First(t => t.Id == efTag.Id);
+                context.Entry(entry).State = EntityState.Detached;
+                context.Entry(efTag).State = EntityState.Modified;
+            }
             context.SaveChanges();
             
             return efTag.Id;

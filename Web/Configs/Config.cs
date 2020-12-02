@@ -1,4 +1,4 @@
-namespace Web.Services
+namespace Web.Configs
 {
     public class Config
     {
