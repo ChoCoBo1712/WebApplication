@@ -10,6 +10,6 @@ namespace Domain.Models
 
         [Required] public Album Album { get; set; }
 
-        public List<Tag> Tags { get; set; }
+        [Required] public List<Tag> Tags { get; set; }
     }
 }

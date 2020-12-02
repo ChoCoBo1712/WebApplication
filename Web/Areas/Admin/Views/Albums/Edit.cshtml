@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "Editing album";
 }
+
+<a href="/admin/albums">Back</a>
 <form action="/admin/albums/edit" enctype="multipart/form-data" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">

@@ -177,7 +177,7 @@ namespace Web.Controllers
 
             if (signInResult.Succeeded)
             {
-                return LocalRedirect(returnUrl);
+                return Redirect(returnUrl);
             }
             else
             {
@@ -192,7 +192,8 @@ namespace Web.Controllers
                         user = new IdentityUser<int>
                         {
                             UserName = info.Principal.FindFirstValue(ClaimTypes.Email),
-                            Email = info.Principal.FindFirstValue(ClaimTypes.Email)
+                            Email = info.Principal.FindFirstValue(ClaimTypes.Email),
+                            EmailConfirmed = true
                         };
 
                         await userManager.CreateAsync(user);
@@ -201,7 +202,7 @@ namespace Web.Controllers
                     await userManager.AddLoginAsync(user, info);
                     await signInManager.SignInAsync(user, false);
                     
-                    return LocalRedirect(returnUrl);
+                    return Redirect(returnUrl);
                 }
 
                 ViewBag.ErrorTitle = $"Email claim not received from: {info.LoginProvider}";

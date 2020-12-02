@@ -32,6 +32,38 @@ namespace Repository
                 .HasOne(al => al.Artist)
                 .WithMany(ar => ar.Albums)
                 .HasForeignKey(al => al.ArtistId);
+            
+            modelBuilder.Entity<IdentityRole<int>>().HasData(new IdentityRole<int>()
+            {
+                Id = 1,
+                Name = "admin",
+                NormalizedName = "ADMIN"
+            });
+
+            modelBuilder.Entity<IdentityRole<int>>().HasData(new IdentityRole<int>()
+            {
+                Id = 2,
+                Name = "customer",
+                NormalizedName = "CUSTOMER"
+            });
+            
+            modelBuilder.Entity<IdentityUser<int>>().HasData(new IdentityUser<int>()
+            {
+                Id = 1,
+                UserName = "admin",
+                NormalizedUserName = "ADMIN",
+                Email = "webappprog@gmail.com",
+                NormalizedEmail = "WEBAPPPROG@GMAIL.COM",
+                EmailConfirmed = true,
+                PasswordHash = new PasswordHasher<IdentityUser<int>>().HashPassword(null, "admin"),
+                SecurityStamp = string.Empty
+            });
+
+            modelBuilder.Entity<IdentityUserRole<int>>().HasData(new IdentityUserRole<int>()
+            {
+                RoleId = 1,
+                UserId = 1
+            });
         }
     }
 }

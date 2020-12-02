@@ -20,8 +20,8 @@ namespace Repository
         }  
         
         public List<Song> GetAll()  
-        {  
-            var efSongs = context.Songs.ToList();
+        {
+            var efSongs = context.Songs.Include(t => t.Tags).ToList();
             var songs = mapper.Map<List<Song>>(efSongs);
             foreach (var pair in efSongs.Zip(songs, 
                 (efSong, song) => new { EFSong = efSong, Song = song }))
@@ -29,22 +29,21 @@ namespace Repository
                 pair.Song.Album = mapper.Map<Album>(context.Albums.FirstOrDefault(t => t.Id == pair.EFSong.AlbumId));
                 pair.Song.Album.Artist =
                     mapper.Map<Artist>(context.Artists.FirstOrDefault(t => t.Id == pair.EFSong.Album.ArtistId));
-                pair.Song.Tags = mapper.Map<List<Tag>>(context.Tags.Where(t => t.Id == pair.EFSong.Id));
             }
 
             return songs;
         }  
         
         public Song Get(int id)  
-        {  
-            var efSong = context.Songs.FirstOrDefault(t => t.Id == id);
+        {
+            var efSongs = context.Songs.Include(t => t.Tags).ToList();
+            var efSong = efSongs.FirstOrDefault(t => t.Id == id);
 
             if (efSong == null)
                 return null;
             
             var song = mapper.Map<Song>(efSong);
             song.Album = mapper.Map<Album>(context.Albums.FirstOrDefault(t => t.Id == efSong.AlbumId));
-            song.Tags = mapper.Map<List<Tag>>(context.Tags.Where(t => t.Id == efSong.Id));
 
             return song;
         }

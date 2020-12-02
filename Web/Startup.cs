@@ -75,6 +75,19 @@ namespace Web
                 options.ClientId = GoogleConfig.ClientId;
                 options.ClientSecret = GoogleConfig.ClientSecret;
             });
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/account/login";
+            });
+            services.AddAuthorization(x =>
+            {
+                x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
+            });
+            services.AddControllersWithViews(options =>
+            {
+                options.Conventions.Add(new AdminAreaAuth("Admin", "AdminArea"));
+            })
+            .AddSessionStateTempDataProvider();
             // .AddUserStore<UserStore<EFUser, EFUserRole, ApplicationDbContext, int>>()
             // .AddRoleStore<RoleStore<EFUserRole, ApplicationDbContext, int>>();
         }
@@ -88,6 +101,7 @@ namespace Web
 
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCookiePolicy();
  
             app.UseRouting();
  

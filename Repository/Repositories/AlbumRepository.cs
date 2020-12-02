@@ -27,7 +27,7 @@ namespace Repository
                 (efAlbum, album) => new { EFAlbum = efAlbum, Album = album }))
             {
                 pair.Album.Artist = mapper.Map<Artist>(context.Artists.FirstOrDefault(t => t.Id == pair.EFAlbum.ArtistId));
-                pair.Album.Songs = mapper.Map<List<Song>>(context.Songs.Where(t => t.Id == pair.EFAlbum.Id));
+                pair.Album.Songs = mapper.Map<List<Song>>(context.Songs.Where(t => t.AlbumId == pair.EFAlbum.Id));
             }
 
             return albums;
@@ -42,7 +42,7 @@ namespace Repository
             
             var album = mapper.Map<Album>(efAlbum);
             album.Artist = mapper.Map<Artist>(context.Artists.FirstOrDefault(t => t.Id == efAlbum.ArtistId));
-            album.Songs = mapper.Map<List<Song>>(context.Songs.Where(t => t.Id == efAlbum.Id));
+            album.Songs = mapper.Map<List<Song>>(context.Songs.Where(t => t.AlbumId == efAlbum.Id));
 
             return album;
         }

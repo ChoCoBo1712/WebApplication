@@ -21,20 +21,16 @@ namespace Repository
         
         public List<Tag> GetAll()  
         {  
-            var efTag = context.Tags.ToList();
-            var tag = mapper.Map<List<Tag>>(efTag);
-            foreach (var pair in efTag.Zip(tag, 
-                (efTag, tag) => new { EFTag = efTag, Tag = tag }))
-            {
-                pair.Tag.Songs = mapper.Map<List<Song>>(context.Songs.Where(t => t.Id == pair.EFTag.Id));
-            }
+            var efTags = context.Tags.Include(t => t.Songs).ToList();
+            var tags = mapper.Map<List<Tag>>(efTags);
 
-            return tag;  
+            return tags;  
         }  
         
         public Tag Get(int id)  
         {  
-            var efTag = context.Tags.FirstOrDefault(t => t.Id == id);
+            var efTags = context.Tags.Include(t => t.Songs).ToList();
+            var efTag = efTags.FirstOrDefault(t => t.Id == id);
 
             if (efTag == null)
                 return null;

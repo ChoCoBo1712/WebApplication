@@ -31,12 +31,8 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="MappingProfile.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20201125201901_init.cs" t="Include" />
-          <e p="20201125201901_init.Designer.cs" t="Include" />
-          <e p="20201128123643_'users'.cs" t="Include" />
-          <e p="20201128123643_'users'.Designer.cs" t="Include" />
-          <e p="20201201195230_'name'.cs" t="Include" />
-          <e p="20201201195230_'name'.Designer.cs" t="Include" />
+          <e p="20201202214848_'name'.cs" t="Include" />
+          <e p="20201202214848_'name'.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -134,6 +130,7 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Configs" t="Include">
+          <e p="AdminAreaAuth.cs" t="Include" />
           <e p="AllowedExtensions.cs" t="Include" />
           <e p="Config.cs" t="Include" />
           <e p="GoogleConfig.cs" t="Include" />
