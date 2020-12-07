@@ -3,7 +3,7 @@
     ViewBag.Title = "Adding song";
 }
 
-<a href="/admin/songs">Back</a>
+<a class="cross-fade" href="/admin/songs">Back</a>
 <form action="/admin/songs/create" enctype="multipart/form-data" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
@@ -15,8 +15,12 @@
         <select asp-for="AlbumId" asp-items="@(new SelectList(ViewBag.Albums, "Id", dataTextField: "Name"))" class="form-control"></select>
     </div>
     <div class="form-group">
-        <label asp-for="TagIds" class="control-label">Album</label>
-        <select multiple asp-for="TagIds" asp-items="@(new SelectList(ViewBag.Tags, "Id", dataTextField: "Name"))" class="form-control"></select>
+        <label asp-for="File" class="control-label">File</label>
+        <input type="file" asp-for="File" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="TagIds" class="control-label">Tags</label>
+        <select multiple asp-for="TagIds" asp-items="@(new SelectList(ViewBag.Tags, "Id", dataTextField: "Name"))" style="height: 60px"></select>
     </div>
     <div class="form-group">
         <input type="submit" value="Add" class="btn btn-outline-secondary" />

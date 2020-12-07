@@ -1,7 +1,10 @@
+using System.Threading.Tasks;
 using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Service.Interfaces;
 using Web.Areas.Admin.ViewModels;
+using Web.Hubs;
 
 namespace Web.Areas.Admin.Controllers
 {
@@ -9,10 +12,12 @@ namespace Web.Areas.Admin.Controllers
     public class TagsController : Controller
     {
         private IDataManager dataManager;
+        IHubContext<NotificationHub> hubContext;
 
-        public TagsController(IDataManager dataManager)
+        public TagsController(IDataManager dataManager, IHubContext<NotificationHub> hubContext)
         {
             this.dataManager = dataManager;
+            this.hubContext = hubContext;
         }
         
         public IActionResult Index() => View(dataManager.TagRepository.GetAll());
@@ -29,7 +34,7 @@ namespace Web.Areas.Admin.Controllers
             {
                 Tag tag = new Tag
                 {
-                    Name = model.Name, Description = model.Description
+                    Name = model.Name, UserId = 1, Verified = true
                 };
                 dataManager.TagRepository.Save(tag);
                 return Redirect("/admin/tags");
@@ -46,13 +51,13 @@ namespace Web.Areas.Admin.Controllers
             }
             TagViewModel model = new TagViewModel
             {
-                Id = tag.Id, Name = tag.Name, Description = tag.Description
+                Id = tag.Id, Name = tag.Name
             };
             return View(model);
         }
  
         [HttpPost]
-        public IActionResult Edit(TagViewModel model)
+        public async Task<IActionResult> Edit(TagViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +65,11 @@ namespace Web.Areas.Admin.Controllers
                 if (tag != null)
                 {
                     tag.Name = model.Name;
-                    tag.Description = model.Description;
+                    if (!tag.Verified)
+                    {
+                        tag.Verified = true;
+                        await hubContext.Clients.User(tag.UserId.ToString()).SendAsync("notify", "Your tag has been verified and added");
+                    }
 
                     dataManager.TagRepository.Save(tag);
                     return Redirect("/admin/tags");
@@ -70,11 +79,15 @@ namespace Web.Areas.Admin.Controllers
         }
  
         [HttpPost]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
             Tag tag = dataManager.TagRepository.Get(id);
             if (tag != null)
             {
+                if (!tag.Verified)
+                {
+                    await hubContext.Clients.User(tag.UserId.ToString()).SendAsync("notify", "Your tag hasn't been verified and was deleted");
+                }
                 dataManager.TagRepository.Delete(id);
             }
             return Redirect("/admin/tags");

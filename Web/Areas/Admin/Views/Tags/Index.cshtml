@@ -3,19 +3,21 @@
     ViewBag.Title = "Tags list";
 }
  
-<a href="/admin">Back</a>
-<a href="/admin/tags/create">Add tag</a>
+<a class="cross-fade" href="/admin">Back</a>
+<a class="cross-fade" href="/admin/tags/create">Add tag</a>
  
-<table class="table">
-    <tr><th>Name</th><th>Actions</th></tr>
+<table class="admin_table">
+    <tr><th>Name</th><th>Verified</th><th>Actions</th></tr>
     @foreach (var tag in Model)
     {
         <tr>
             <td>@tag.Name</td>
+            <td>@tag.Verified.ToString()</td>
             <td>
                 <form action="/admin/tags/delete?id=@tag.Id" method="post">
-                    <a class="btn btn-sm btn-primary" href="/admin/tags/edit?id=@tag.Id">Edit</a>
-                    <button type="submit" class="btn btn-sm btn-danger">
+                    <a class="draw-outline draw-outline--tandem" href="/admin/tags/edit?id=@tag.Id">Edit</a>
+                    <button class="draw-outline draw-outline--tandem" type="submit" 
+                            style="background: rgba(0,0,0,0); font-size: 16px;">
                         Delete
                     </button>
                 </form>

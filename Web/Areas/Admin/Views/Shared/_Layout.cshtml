@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @await Html.PartialAsync("CssShared")
+</head>
+<body>
+    <a class="cross-fade" href="/admin">Admin</a>
+    <hr/>
+<section>
+    @RenderBody()
+</section>
+
+<div style="position: fixed; bottom: 5px">
+    Application by ChoCoBo1712
+</div>
+
+</body>
+</html>

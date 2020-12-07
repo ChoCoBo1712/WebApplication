@@ -1,0 +1,19 @@
+@model Web.ViewModels.Home.TagViewModel
+@{
+    ViewBag.Title = "Adding tag";
+}
+
+<hr/>
+<form action="/home/addTag" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div>
+        <input hidden asp-for="SongId">
+    </div>
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" pattern="[a-zA-Z]+"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add" class="btn btn-outline-secondary" />
+    </div>
+</form>

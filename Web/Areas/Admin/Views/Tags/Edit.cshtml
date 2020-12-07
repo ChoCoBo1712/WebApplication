@@ -3,7 +3,7 @@
     ViewBag.Title = "Editing tag";
 }
 
-<a href="/admin/tags">Back</a>
+<a class="cross-fade" href="/admin/tags">Back</a>
 <form action="/admin/tags/edit" enctype="multipart/form-data" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
@@ -13,10 +13,6 @@
         <label asp-for="Name" class="control-label">Name</label>
         <input type="text" asp-for="Name" class="form-control" />
     </div>
-    <div class="form-group">
-            <label asp-for="Description" class="control-label">Description</label>
-            <input type="text" asp-for="Description" class="form-control" />
-        </div>
     <div class="form-group">
         <input type="submit" value="Save" class="btn btn-outline-secondary" />
     </div>

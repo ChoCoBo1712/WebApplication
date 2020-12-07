@@ -3,10 +3,10 @@
     ViewBag.Title = "Songs list";
 }
  
-<a href="/admin">Back</a>
-<a href="/admin/songs/create">Add song</a>
+<a class="cross-fade" href="/admin">Back</a>
+<a class="cross-fade" href="/admin/songs/create">Add song</a>
  
-<table class="table">
+<table class="admin_table">
     <tr><th>Name</th><th>Album</th><th>Artist</th><th>Tags</th><th>Actions</th></tr>
     @foreach (var song in Model)
     {
@@ -19,24 +19,21 @@
                 @song.Album.Artist.Name
             </td>
             <td>
-                <div style="height: 20px; width: 100px; overflow-y: scroll; overflow-x: hidden">
-                    <table class="table">
-                    @foreach (var tag in song.Tags)
-                    {
-                        @tag.Name
-                        @if (tag != song.Tags.Last())
+                <div style="height: 20px; width: 100px; overflow-y: auto; overflow-x: hidden">
+                    <table>
+                        @foreach (var tag in song.Tags)
                         {
-                            <text>,</text>
+                            @tag.Name
+                            <break/>;
                         }
-                        <break/>;
-                    }
                     </table>
                 </div>
             </td>
             <td>
                 <form action="/admin/songs/delete?id=@song.Id" method="post">
-                    <a class="btn btn-sm btn-primary" href="/admin/songs/edit?id=@song.Id">Edit</a>
-                    <button type="submit" class="btn btn-sm btn-danger">
+                    <a class="draw-outline draw-outline--tandem" href="/admin/songs/edit?id=@song.Id">Edit</a>
+                    <button class="draw-outline draw-outline--tandem" type="submit" 
+                            style="background: rgba(0,0,0,0); font-size: 16px;">
                         Delete
                     </button>
                 </form>

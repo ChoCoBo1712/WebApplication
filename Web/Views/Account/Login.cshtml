@@ -1,6 +1,6 @@
 @model Web.ViewModels.Account.LoginViewModel
 
-<div class="row">
+<div  style="float: left">
     <h2>User Login</h2>
     <form method="post" asp-controller="Account" asp-action="Login"
           asp-route-returnUrl="@Model.ReturnUrl">
@@ -12,13 +12,15 @@
         </div>
         <div>
             <label asp-for="Password"></label><br />
-            <input asp-for="Password" />
+            <input type="password" asp-for="Password" />
             <span asp-validation-for="Password"></span>
         </div>
         <div>
             <input type="submit" value="Login"/>
         </div>
     </form>
+</div>
+<div style="float: left; margin-left: 30px">
     <h2>External User Login</h2>
     <form method="post" asp-controller="Account" asp-action="ExternalLogin"
           asp-route-returnUrl="@Model.ReturnUrl">

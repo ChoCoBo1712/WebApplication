@@ -1,0 +1,30 @@
+@model Domain.Models.Album
+
+<hr/>
+<div align="center">
+    <div>
+        <h2>@Model.Name</h2>
+        <hr/>
+        <img src="~/img/albums/@Model.ImagePath" width="100" height="100">
+    </div>
+    <div>By <a class="draw-outline draw-outline--tandem" href="/home/artist?id=@Model.Artist.Id">@Model.Artist.Name</a></div>
+    <h4>Songs</h4>
+    <table class="admin_table">
+            <tr>
+                <th>Player</th>
+                <th>Name</th>
+            </tr>
+        @foreach (var song in Model.Songs)
+        {
+            <tr>
+                <td>
+                    <audio controls>
+                        <source src="~/audio/@song.FilePath" type="audio/@song.FilePath.Split('.')[1]">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+                <td>@song.Name</td>
+            </tr>
+        }
+        </table>
+</div>

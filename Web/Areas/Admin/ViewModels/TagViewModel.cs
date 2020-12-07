@@ -9,9 +9,5 @@ namespace Web.Areas.Admin.ViewModels
         
         [MaxLength(12, ErrorMessage = "Maximum length of a tag name is 12 characters")]
         [Required] public string Name { get; set; }
-        
-        [Required] public string Description { get; set; }
-        
-        public List<int> SongIds { get; set; }
     }
 }

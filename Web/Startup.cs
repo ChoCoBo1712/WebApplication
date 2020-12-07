@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -14,21 +15,25 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Repository;
 using Repository.Models;
 using Service.Implementations;
 using Service.Interfaces;
 using Web.Configs;
+using Web.Hubs;
 
 namespace Web
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
+        private IConfiguration Configuration { get; }
+        private IWebHostEnvironment env { get; }
         
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            this.env = env;
         } 
         
         public void ConfigureServices(IServiceCollection services)
@@ -46,7 +51,7 @@ namespace Web
             services.AddScoped<IRepository<Artist>, ArtistRepository>();
             services.AddScoped<IRepository<Tag>, TagRepository>();
             services.AddScoped<IDataManager, DataManager>();
-            services.AddScoped<IImageService, ImageService>();
+            services.AddScoped<IFileService, FileService>();
             services.AddControllersWithViews();
             var mapperConfig = new MapperConfiguration(cfg =>
             {
@@ -57,6 +62,13 @@ namespace Web
             services.AddScoped<IEmailService>(t => new EmailService(
                 MailConfig.Sender, MailConfig.SmtpServer, MailConfig.SmtpPort, MailConfig.Username, MailConfig.Password
             ));
+            services.AddSignalR();
+            services.AddLogging(opt =>
+            {
+                opt.AddConsole();
+                opt.AddFile(Path.Combine(env.WebRootPath, "logs/all.log"));
+                opt.AddFile(Path.Combine(env.WebRootPath, "logs/error.log"), LogLevel.Error);
+            });
             
             //Authentication
             services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
@@ -98,6 +110,10 @@ namespace Web
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseStatusCodePagesWithRedirects("/error/{0}");
+            }
 
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -112,7 +128,7 @@ namespace Web
             {
                 endpoints.MapControllerRoute("default", "{controller=home}/{action=index}");
                 endpoints.MapControllerRoute("admin", "{area:exists}/{controller=models}/{action=index}");
-                // endpoints.MapControllerRoute("default", "{controller=account}/{action=register}");
+                endpoints.MapHub<NotificationHub>("/NotificationHub");
             });
         }
     }

@@ -14,8 +14,6 @@
           <e p="BaseEntity.cs" t="Include" />
           <e p="Song.cs" t="Include" />
           <e p="Tag.cs" t="Include" />
-          <e p="User.cs" t="Include" />
-          <e p="UserRole.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -31,8 +29,12 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="MappingProfile.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20201202214848_'name'.cs" t="Include" />
-          <e p="20201202214848_'name'.Designer.cs" t="Include" />
+          <e p="20201203091921_'name'.cs" t="Include" />
+          <e p="20201203091921_'name'.Designer.cs" t="Include" />
+          <e p="20201203210515_'name1'.cs" t="Include" />
+          <e p="20201203210515_'name1'.Designer.cs" t="Include" />
+          <e p="20201206074236_'name2'.cs" t="Include" />
+          <e p="20201206074236_'name2'.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -40,8 +42,6 @@
           <e p="EFArtist.cs" t="Include" />
           <e p="EFSong.cs" t="Include" />
           <e p="EFTag.cs" t="Include" />
-          <e p="EFUser.cs" t="Include" />
-          <e p="EFUserRole.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -63,13 +63,13 @@
         <e p="Implementations" t="Include">
           <e p="DataManager.cs" t="Include" />
           <e p="EmailService.cs" t="Include" />
-          <e p="ImageService.cs" t="Include" />
+          <e p="FileService.cs" t="Include" />
           <e p="Populator.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
           <e p="IDataManager.cs" t="Include" />
           <e p="IEmailService.cs" t="Include" />
-          <e p="IImageService.cs" t="Include" />
+          <e p="IFileService.cs" t="Include" />
           <e p="IPopulator.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -82,7 +82,6 @@
         <e p="Service.csproj" t="IncludeRecursive" />
       </e>
       <e p="Web" t="IncludeRecursive">
-        <e p="Admin" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="Areas" t="Include">
@@ -102,6 +101,7 @@
             </e>
             <e p="Views" t="Include">
               <e p="_ViewImports.cshtml" t="Include" />
+              <e p="_ViewStart.cshtml" t="Include" />
               <e p="Albums" t="Include">
                 <e p="Create.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
@@ -114,6 +114,10 @@
               </e>
               <e p="Models" t="Include">
                 <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Shared" t="Include">
+                <e p="_Layout.cshtml" t="Include" />
+                <e p="CssShared.cshtml" t="Include" />
               </e>
               <e p="Songs" t="Include">
                 <e p="Create.cshtml" t="Include" />
@@ -138,7 +142,11 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
+          <e p="ErrorController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="Hubs" t="Include">
+          <e p="NotificationHub.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -158,27 +166,71 @@
             <e p="LoginViewModel.cs" t="Include" />
             <e p="RegisterViewModel.cs" t="Include" />
           </e>
+          <e p="Home" t="Include">
+            <e p="AlbumViewModel.cs" t="Include" />
+            <e p="SearchViewModel.cs" t="Include" />
+            <e p="TagViewModel.cs" t="Include" />
+          </e>
         </e>
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
           <e p="Account" t="Include">
             <e p="Error.cshtml" t="Include" />
             <e p="Login.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
           </e>
+          <e p="Error" t="Include">
+            <e p="403.cshtml" t="Include" />
+            <e p="404.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
+            <e p="AddTag.cshtml" t="Include" />
+            <e p="Album.cshtml" t="Include" />
+            <e p="Artist.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="CssShared.cshtml" t="Include" />
+            <e p="ScriptsShared.cshtml" t="Include" />
           </e>
         </e>
         <e p="Web.csproj" t="IncludeRecursive" />
         <e p="wwwroot" t="Include">
+          <e p="audio" t="Include">
+            <e p="003b2a80-4458-43a4-8377-f95109bc62da_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="1c33b865-a498-4bdb-b2cf-ec9acb186a79_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="1d9509b5-654a-493c-aebe-74b0f030d7f2_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="410fe9d1-315c-485c-b947-ca737da2f80e_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="462ea281-9674-4d23-b61d-3039b88c6006_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="542d956a-55cd-4d8b-9ef1-9bea649af75f_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="58b57169-d201-4cc7-b8d7-bb07916723b0_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="744a8411-9fdf-41ca-9b1c-885802bf4c27_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="a98b4459-d2d7-4c0b-8da9-214909dd6f99_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+            <e p="ce288463-9923-4889-baff-433c80fff5ca_Recording 10-21-20 at 04-50 PM.wav" t="Include" />
+          </e>
+          <e p="css" t="Include">
+            <e p="error.css" t="Include" />
+            <e p="style.css" t="Include" />
+          </e>
           <e p="img" t="Include">
             <e p="Albums" t="Include">
               <e p="4641fc5a-c8eb-4301-9f9d-1bd0ccf1a849_gachi-production-and-trade-joint-stock-company-logo-2047.png" t="Include" />
+              <e p="5f849913-e8cc-4212-a4b7-de93bdce5a74_dfb04aeb6f0cc5ed55292deb3e28c8fa7277f90dr1-195-258v2_uhq.jpg" t="Include" />
             </e>
             <e p="Artists" t="Include">
+              <e p="052d8fde-1d33-404c-b780-4a118c578ea5_Снимок экрана 2020-11-24 183432.png" t="Include" />
               <e p="32989b88-99a2-4bb4-b5f1-b1a880840af4_Снимок экрана 2020-11-24 183432.png" t="Include" />
             </e>
+          </e>
+          <e p="Index.cshtml" t="Include" />
+          <e p="js" t="Include">
+            <e p="notification.js" t="Include" />
+          </e>
+          <e p="logs" t="Include">
+            <e p="all-20201208.log" t="Include" />
+            <e p="error-20201208.log" t="Include" />
           </e>
         </e>
       </e>

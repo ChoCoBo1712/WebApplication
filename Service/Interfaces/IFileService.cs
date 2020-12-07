@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Http;
 
 namespace Service.Interfaces
 {
-    public interface IImageService
+    public interface IFileService
     {
-        Task SaveImage(IFormFile file, string filePath);
+        Task SaveFile(IFormFile file, string filePath);
     }
 }

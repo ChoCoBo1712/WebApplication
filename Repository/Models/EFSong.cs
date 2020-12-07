@@ -11,6 +11,8 @@ namespace Repository.Models
         public EFAlbum Album { get; set; }
         
         public int AlbumId { get; set; }
+        
+        public string FilePath { get; set; }
 
         public List<EFTag> Tags { get; set; }
     }

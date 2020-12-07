@@ -15,10 +15,14 @@ namespace Web.Areas.Admin.Controllers
     public class SongsController : Controller
     {
         private IDataManager dataManager;
+        private IFileService fileService;
+        private IWebHostEnvironment environment;
 
-        public SongsController(IDataManager dataManager)
+        public SongsController(IDataManager dataManager, IFileService fileService, IWebHostEnvironment environment)
         {
             this.dataManager = dataManager;
+            this.fileService = fileService;
+            this.environment = environment;
         }
         
         public IActionResult Index() => View(dataManager.SongRepository.GetAll());
@@ -31,7 +35,7 @@ namespace Web.Areas.Admin.Controllers
         }
  
         [HttpPost]
-        public IActionResult Create(SongViewModel model)
+        public async Task <IActionResult> Create(SongViewModel model)
         {
             ViewBag.Albums = dataManager.AlbumRepository.GetAll();
             ViewBag.Tags = dataManager.TagRepository.GetAll();
@@ -42,9 +46,14 @@ namespace Web.Areas.Admin.Controllers
                 {
                     tags.Add(dataManager.TagRepository.Get(id));
                 }
+                string fileName = null;
+                if (model.File != null)
+                {
+                    fileName = await UploadFile(model.File);
+                } 
                 Song song = new Song
                 {
-                    Name = model.Name, Album = dataManager.AlbumRepository.Get(model.AlbumId), Tags = tags
+                    Name = model.Name, Album = dataManager.AlbumRepository.Get(model.AlbumId), Tags = tags, FilePath = fileName
                 };
                 dataManager.SongRepository.Save(song);
                 return Redirect("/admin/songs");
@@ -74,7 +83,7 @@ namespace Web.Areas.Admin.Controllers
         }
  
         [HttpPost]
-        public IActionResult Edit(SongViewModel model)
+        public async Task<IActionResult> Edit(SongViewModel model)
         {
             ViewBag.Albums = dataManager.AlbumRepository.GetAll();
             ViewBag.Tags = dataManager.TagRepository.GetAll();
@@ -83,10 +92,17 @@ namespace Web.Areas.Admin.Controllers
                 Song song = dataManager.SongRepository.Get(model.Id);
                 if (song != null)
                 {
+                    song.Tags.Clear();
                     List<Tag> tags = new List<Tag>();
                     foreach (var id in model.TagIds)
                     {
                         tags.Add(dataManager.TagRepository.Get(id));
+                    }
+                    if (model.File != null)
+                    {
+                        if (song.FilePath != null)
+                            DeleteFile(song.FilePath);
+                        song.FilePath = await UploadFile(model.File);
                     }
                     song.Name = model.Name;
                     song.Album = dataManager.AlbumRepository.Get(model.AlbumId);
@@ -105,9 +121,37 @@ namespace Web.Areas.Admin.Controllers
             Song song = dataManager.SongRepository.Get(id);
             if (song != null)
             {
+                DeleteFile(song.FilePath);
                 dataManager.SongRepository.Delete(id);
             }
             return Redirect("/admin/songs");
+        }
+        
+        private async Task<string> UploadFile(IFormFile file)
+        {
+            string uploadDir = Path.Combine(environment.WebRootPath, "audio");
+
+            if (!Directory.Exists(uploadDir))
+            {
+                Directory.CreateDirectory(uploadDir);
+            }
+            
+            string fileName = $"{Guid.NewGuid().ToString()}_{file.FileName}";
+            string filePath = Path.Combine(uploadDir, fileName);
+            
+            await fileService.SaveFile(file, filePath);
+            return fileName;
+        }
+
+        private void DeleteFile(string fileName)
+        {
+            string uploadDir = Path.Combine(environment.WebRootPath, "audio");
+            string filePath = Path.Combine(uploadDir, fileName);
+            
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+            }
         }
     }
 }

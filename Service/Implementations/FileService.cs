@@ -5,16 +5,14 @@ using Service.Interfaces;
 
 namespace Service.Implementations
 {
-    public class ImageService : IImageService
+    public class FileService : IFileService
     {
-        public async Task SaveImage(IFormFile file, string filePath)
+        public async Task SaveFile(IFormFile file, string filePath)
         {
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(fileStream);
             }
-
-            // image postprocessing maybe in future...
         }
     }
 }

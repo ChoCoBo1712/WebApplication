@@ -9,6 +9,8 @@ namespace Domain.Models
         [Required] public string Name { get; set; }
 
         [Required] public Album Album { get; set; }
+        
+        [Required] public string FilePath { get; set; }
 
         [Required] public List<Tag> Tags { get; set; }
     }

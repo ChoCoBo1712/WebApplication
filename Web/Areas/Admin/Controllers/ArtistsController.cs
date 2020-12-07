@@ -16,13 +16,13 @@ namespace Web.Areas.Admin.Controllers
     public class ArtistsController : Controller
     {
         private IDataManager dataManager;
-        private IImageService imageService;
+        private IFileService fileService;
         private IWebHostEnvironment environment;
 
-        public ArtistsController(IDataManager dataManager, IImageService imageService, IWebHostEnvironment environment)
+        public ArtistsController(IDataManager dataManager, IFileService fileService, IWebHostEnvironment environment)
         {
             this.dataManager = dataManager;
-            this.imageService = imageService;
+            this.fileService = fileService;
             this.environment = environment;
         }
         
@@ -109,7 +109,7 @@ namespace Web.Areas.Admin.Controllers
             string fileName = $"{Guid.NewGuid().ToString()}_{file.FileName}";
             string filePath = Path.Combine(uploadDir, fileName);
             
-            await imageService.SaveImage(file, filePath);
+            await fileService.SaveFile(file, filePath);
             return fileName;
         }
 

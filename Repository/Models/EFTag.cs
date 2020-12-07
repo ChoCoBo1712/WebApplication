@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Repository.Models
 {
@@ -8,7 +9,9 @@ namespace Repository.Models
         
         public string Name { get; set; }
         
-        public string Description { get; set; }
+        public int UserId { get; set; }
+        
+        public bool Verified { get; set; }
         
         public List<EFSong> Songs { get; set; }
     }

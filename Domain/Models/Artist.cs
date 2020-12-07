@@ -6,7 +6,7 @@ namespace Domain.Models
     public class Artist: BaseEntity
     {
         [Required] public string Name { get; set; }
-        
+
         [Required] public string ImagePath { get; set; }
         
         [Required] public string Description { get; set; }

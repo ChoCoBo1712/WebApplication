@@ -3,22 +3,26 @@
     ViewBag.Title = "Artists list";
 }
  
-<a href="/admin">Back</a>
-<a href="/admin/artists/create">Add artist</a>
+<a class="cross-fade" href="/admin">Back</a>
+<a class="cross-fade" href="/admin/artists/create">Add artist</a>
  
-<table class="table">
-    <tr><th>Name</th><th>Image</th><th>Actions</th></tr>
+<table class="admin_table">
+    <tr><th>Name</th><th>Image</th><th>Description</th><th>Actions</th></tr>
     @foreach (var artist in Model)
     {
         <tr>
             <td>@artist.Name</td>
             <td>
-                <img src="~/img/artists/@artist.ImagePath" width="40" height="40">
+                <img src="~/img/artists/@artist.ImagePath" width="60" height="60">
+            </td>
+            <td>
+                @artist.Description
             </td>
             <td>
                 <form action="/admin/artists/delete?id=@artist.Id" method="post">
-                    <a class="btn btn-sm btn-primary" href="/admin/artists/edit?id=@artist.Id">Edit</a>
-                    <button type="submit" class="btn btn-sm btn-danger">
+                    <a class="draw-outline draw-outline--tandem" href="/admin/artists/edit?id=@artist.Id">Edit</a>
+                    <button class="draw-outline draw-outline--tandem" type="submit"
+                            style="background: rgba(0,0,0,0); font-size: 16px;">
                         Delete
                     </button>
                 </form>    

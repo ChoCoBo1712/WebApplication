@@ -1,0 +1,25 @@
+@model Domain.Models.Artist
+
+ <hr/>
+<div align="center">
+    <div>
+        <h2>@Model.Name</h2>
+        <hr/>
+        <img src="~/img/artists/@Model.ImagePath" width="100" height="100">
+    </div>
+    <div>@Model.Description</div>
+    <h4>Albums</h4>
+    <table class="admin_table">
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+        </tr>
+    @foreach (var album in Model.Albums)
+    {
+        <tr>
+            <td><a class="draw-outline draw-outline--tandem" href="/home/album?id=@album.Id">@album.Name</a></td>
+            <td><img src="~/img/albums/@album.ImagePath" width="60" height="60"></td>
+        </tr>
+    }
+    </table>
+</div>

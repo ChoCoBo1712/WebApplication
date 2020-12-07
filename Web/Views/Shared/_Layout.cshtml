@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @await Html.PartialAsync("ScriptsShared")
+    @await Html.PartialAsync("CssShared")
+    <a class="cross-fade" href="/">AudioLib</a>
+</head>
+<body>
+<section>
+    @RenderBody()
+</section>
+
+<div style="position: fixed; bottom: 5px">
+    Application by ChoCoBo1712
+</div>
+
+</body>
+</html>

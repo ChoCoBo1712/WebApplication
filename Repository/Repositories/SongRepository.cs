@@ -36,8 +36,7 @@ namespace Repository
         
         public Song Get(int id)  
         {
-            var efSongs = context.Songs.Include(t => t.Tags).ToList();
-            var efSong = efSongs.FirstOrDefault(t => t.Id == id);
+            var efSong = context.Songs.Include(t => t.Tags).FirstOrDefault(t => t.Id == id);
 
             if (efSong == null)
                 return null;
@@ -59,6 +58,18 @@ namespace Repository
             else
             {
                 var entry = context.Songs.First(t => t.Id == efSong.Id);
+                entry.Tags.Clear();
+                context.SaveChanges();
+                
+                foreach (var tag in efSong.Tags)
+                {
+                    var tagEntry = context.Tags.FirstOrDefault(t => t.Id == tag.Id);
+                    if (tagEntry != null)
+                    {
+                        context.Entry(tagEntry).State = EntityState.Detached;   
+                    }
+                }
+                
                 context.Entry(entry).State = EntityState.Detached;
                 context.Entry(efSong).State = EntityState.Modified;
             }
