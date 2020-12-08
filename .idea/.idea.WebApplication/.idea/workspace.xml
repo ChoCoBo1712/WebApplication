@@ -22,8 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="azure deployment try 1">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="added github secrets">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/master_audiolib.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/master_audiolib.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" />
         <option value="$PROJECT_DIR$/Web/ViewModels/Home/TagViewModel.cs" />
         <option value="$PROJECT_DIR$/Repository/Models/EFTag.cs" />
         <option value="$PROJECT_DIR$/Repository/MappingProfile.cs" />
@@ -104,7 +103,6 @@
         <option value="$PROJECT_DIR$/Web/Views/Home/AddTag.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Home/Artist.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Home/Album.cshtml" />
-        <option value="$PROJECT_DIR$/Web/appsettings.json" />
         <option value="$PROJECT_DIR$/Web/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/Web/Startup.cs" />
         <option value="$PROJECT_DIR$/Web/Controllers/ErrorController.cs" />
@@ -113,6 +111,8 @@
         <option value="$PROJECT_DIR$/Web/wwwroot/css/error.css" />
         <option value="$PROJECT_DIR$/Web/Views/Shared/CssShared.cshtml" />
         <option value="$PROJECT_DIR$/Web/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/Web/appsettings.json" />
+        <option value="$PROJECT_DIR$/.github/workflows/master_audiolib.yml" />
       </list>
     </option>
   </component>
@@ -193,7 +193,7 @@
       <workItem from="1607346272779" duration="4460000" />
       <workItem from="1607351263274" duration="21287000" />
       <workItem from="1607375801859" duration="3377000" />
-      <workItem from="1607419450474" duration="1333000" />
+      <workItem from="1607419450474" duration="2812000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606136494926</created>
@@ -377,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607419790839</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="azure deployment try 2">
+      <created>1607421082322</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607421082322</updated>
+    </task>
+    <task id="LOCAL-00028" summary="added github secrets">
+      <created>1607422401437</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1607422401437</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +430,9 @@
     <MESSAGE value="admin final" />
     <MESSAGE value="added css" />
     <MESSAGE value="azure deployment try 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="azure deployment try 1" />
+    <MESSAGE value="azure deployment try 2" />
+    <MESSAGE value="added github secrets" />
+    <option name="LAST_COMMIT_MESSAGE" value="added github secrets" />
   </component>
   <component name="WindowStateProjectService">
     <state x="344" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606989398811">
@@ -531,10 +547,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606574446622" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607419808743">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607422608565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607419808743" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607422608565" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1606908738742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
