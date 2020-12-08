@@ -100,8 +100,6 @@ namespace Web
                 options.Conventions.Add(new AdminAreaAuth("Admin", "AdminArea"));
             })
             .AddSessionStateTempDataProvider();
-            // .AddUserStore<UserStore<EFUser, EFUserRole, ApplicationDbContext, int>>()
-            // .AddRoleStore<RoleStore<EFUserRole, ApplicationDbContext, int>>();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -114,8 +112,7 @@ namespace Web
             {
                 app.UseStatusCodePagesWithRedirects("/error/{0}");
             }
-
-            // app.UseHttpsRedirection();
+            
             app.UseStaticFiles();
             app.UseCookiePolicy();
  

@@ -1,0 +1,28 @@
+@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser<int>>
+@{
+    ViewBag.Title = "Users list";
+}
+
+<a class="cross-fade" href="/admin">Back</a>
+
+<table class="admin_table">
+    <tr><th>Id</th><th>UserName</th><th>Actions</th></tr>
+    @foreach (var user in Model)
+    {
+        @if (user.Id != 1)
+        {
+            <tr>
+                <td>@user.Id.ToString()</td>
+                <td>@user.UserName</td>
+                <td>
+                    <form action="/admin/users/delete?id=@user.Id" method="post">
+                        <button class="draw-outline draw-outline--tandem" type="submit" 
+                                style="background: rgba(0,0,0,0); font-size: 16px;">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    }
+</table>

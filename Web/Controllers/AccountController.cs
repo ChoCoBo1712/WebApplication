@@ -58,7 +58,7 @@ namespace Web.Controllers
                     await emailService.SendEmailAsync(model.Email, "Confirm your account",
                         $"Confirm your registration by clicking the link: <a href='{callbackUrl}'>link</a>");
  
-                    return Content("For finishing registration check your email");
+                    return View("Email");
                 }
 
                 foreach (var error in result.Errors)

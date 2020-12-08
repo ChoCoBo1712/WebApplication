@@ -92,6 +92,7 @@
               <e p="ModelsController.cs" t="Include" />
               <e p="SongsController.cs" t="Include" />
               <e p="TagsController.cs" t="Include" />
+              <e p="UsersController.cs" t="Include" />
             </e>
             <e p="ViewModels" t="Include">
               <e p="AlbumViewModel.cs" t="Include" />
@@ -127,6 +128,9 @@
               <e p="Tags" t="Include">
                 <e p="Create.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Users" t="Include">
                 <e p="Index.cshtml" t="Include" />
               </e>
             </e>
@@ -176,6 +180,7 @@
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="Account" t="Include">
+            <e p="Email.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
             <e p="Login.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
