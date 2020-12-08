@@ -28,19 +28,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="added margins">
+    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="file fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/wwwroot/css/style.css" afterDir="false" />
     </list>
     <list id="243181e1-e5d0-47de-bd4a-77fb76bcee80" name="added github secrets" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +94,6 @@
         <option value="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Edit.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Account/Register.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Account/Login.cshtml" />
-        <option value="$PROJECT_DIR$/Web/wwwroot/css/style.css" />
         <option value="$PROJECT_DIR$/Web/Views/Home/Artist.cshtml" />
         <option value="$PROJECT_DIR$/Web/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/Web/Controllers/ErrorController.cs" />
@@ -131,6 +120,7 @@
         <option value="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" />
         <option value="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" />
         <option value="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" />
+        <option value="$PROJECT_DIR$/Web/wwwroot/css/style.css" />
       </list>
     </option>
   </component>
@@ -212,7 +202,7 @@
       <workItem from="1607346272779" duration="4460000" />
       <workItem from="1607351263274" duration="21287000" />
       <workItem from="1607375801859" duration="3377000" />
-      <workItem from="1607419450474" duration="17860000" />
+      <workItem from="1607419450474" duration="18770000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606136494926</created>
@@ -438,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607439044234</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="file fix">
+      <created>1607441621464</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1607441621464</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +491,8 @@
     <MESSAGE value="fix try" />
     <MESSAGE value="admin users" />
     <MESSAGE value="added margins" />
-    <option name="LAST_COMMIT_MESSAGE" value="added margins" />
+    <MESSAGE value="file fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="file fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="344" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607431533041">
@@ -513,22 +511,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="545" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606136307859" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607441431064">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607442315271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607441431064" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607441431063">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607442315271" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607442315270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607441431063" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607441431063">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607442315270" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607442315270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607441431063" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607441431063">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607442315270" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607442315271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607441431063" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607442315271" />
     <state width="1493" height="185" key="GridCell.Tab.1.bottom" timestamp="1607441254852">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -613,10 +611,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606574446622" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607439047425">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607441624722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607439047425" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607441624722" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1606908738742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -629,25 +627,5 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607027488222" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Web/Views/Home/Index.cshtml</url>
-          <line>52</line>
-          <properties documentPath="C:\Users\BigBe\RiderProjects\WebApplication\Web\Views\Home\Index.cshtml" initialLine="52" isMultiMethodBreakpoint="true">
-            <option name="multiMethodBreakpoint" value="true" />
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

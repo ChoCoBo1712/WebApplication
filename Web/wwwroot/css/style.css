@@ -50,6 +50,7 @@
 .admin_table td:first-child {
     display: table-cell;
     border-right: 1px solid #d9e4e6;
+    width: 400px;
 }
 @media (min-width: 480px) {
     .admin_table td {
