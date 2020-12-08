@@ -22,157 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="admin final">
-      <change afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Shared/CssShared.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/_ViewStart.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Controllers/ErrorController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Hubs/NotificationHub.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/ViewModels/Home/AlbumViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/ViewModels/Home/SearchViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/ViewModels/Home/TagViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Error/403.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Error/404.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Home/AddTag.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Home/Album.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Home/Artist.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Shared/CssShared.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Shared/ScriptsShared.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/Views/_ViewStart.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/wwwroot/css/error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/wwwroot/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/wwwroot/index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/wwwroot/js/notification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="added css">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/Album.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/Album.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/Artist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/Artist.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/Song.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/Tag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/Tag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/UserRole.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/MappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Models/EFSong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/Models/EFSong.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Models/EFTag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/Models/EFTag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Models/EFUser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Models/EFUserRole.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Repositories/SongRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/Repositories/SongRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Repository.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/Implementations/ImageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Implementations/FileService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/Interfaces/IImageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Interfaces/IFileService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Service.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Service.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Service.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Service.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/TagsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/TagsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/SongViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/SongViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/TagViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/TagViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Albums/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Albums/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Albums/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Albums/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Albums/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Albums/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Artists/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Artists/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Artists/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Artists/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Artists/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Artists/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Models/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Models/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Tags/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Tags/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Tags/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Tags/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Views/Tags/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Views/Tags/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Views/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Views/Account/Login.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Views/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Views/Account/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Web.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Albums/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Albums/Create.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Albums/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Albums/Edit.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Albums/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Albums/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Artists/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Artists/Create.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Artists/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Artists/Edit.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Artists/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Artists/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Models/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Models/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Songs/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Songs/Create.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Songs/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Songs/Edit.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Songs/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Songs/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Tags/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Tags/Create.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Tags/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Tags/Edit.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Tags/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Tags/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Account/Login.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Account/Register.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Web.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Web.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Web.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Web.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +196,8 @@
       <workItem from="1607239070545" duration="19001000" />
       <workItem from="1607346272779" duration="4460000" />
       <workItem from="1607351263274" duration="21287000" />
-      <workItem from="1607375801859" duration="2699000" />
+      <workItem from="1607375801859" duration="3377000" />
+      <workItem from="1607419450474" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606136494926</created>
@@ -511,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606946262464</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added css">
+      <created>1607379376311</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1607379376311</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +411,8 @@
     <MESSAGE value="added registration" />
     <MESSAGE value="admin functionality init" />
     <MESSAGE value="admin final" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin final" />
+    <MESSAGE value="added css" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="344" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606989398811">
@@ -567,22 +431,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="545" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606136307859" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607377887098">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607380111504">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607377887098" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607377887097">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607380111504" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607380111503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607377887097" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607377887097">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607380111503" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607380111503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607377887097" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607377887097">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607380111503" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607380111504">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607377887097" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607380111504" />
     <state width="1493" height="185" key="GridCell.Tab.1.bottom" timestamp="1607288755149">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -663,10 +527,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606574446622" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606946293029">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607379381887">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606946293029" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607379381887" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1606908738742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
