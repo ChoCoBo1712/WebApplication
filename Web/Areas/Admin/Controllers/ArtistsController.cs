@@ -40,6 +40,13 @@ namespace Web.Areas.Admin.Controllers
                 {
                     fileName = await UploadFile(model.Image);
                 } 
+                
+                if (fileName == null)
+                {
+                    ModelState.AddModelError(nameof(model.Image), "Choose an image");
+                    return View(model);
+                }
+                
                 Artist artist = new Artist { Name = model.Name, ImagePath = fileName, Description = model.Description };
                 dataManager.ArtistRepository.Save(artist);
                 return Redirect("/admin/artists");

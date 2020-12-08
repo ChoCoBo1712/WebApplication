@@ -6,6 +6,7 @@ using Domain.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Service.Interfaces;
 using Web.Areas.Admin.ViewModels;
 
@@ -50,7 +51,14 @@ namespace Web.Areas.Admin.Controllers
                 if (model.File != null)
                 {
                     fileName = await UploadFile(model.File);
-                } 
+                }
+                
+                if (fileName == null)
+                {
+                    ModelState.AddModelError(nameof(model.File), "Choose a file");
+                    return View(model);
+                }
+                
                 Song song = new Song
                 {
                     Name = model.Name, Album = dataManager.AlbumRepository.Get(model.AlbumId), Tags = tags, FilePath = fileName

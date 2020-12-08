@@ -42,7 +42,14 @@ namespace Web.Areas.Admin.Controllers
                 if (model.Image != null)
                 {
                     fileName = await UploadFile(model.Image);
-                } 
+                }
+                
+                if (fileName == null)
+                {
+                    ModelState.AddModelError(nameof(model.Image), "Choose an image");
+                    return View(model);
+                }
+                
                 Album album = new Album
                 {
                     Name = model.Name, ImagePath = fileName, Artist = dataManager.ArtistRepository.Get(model.ArtistId)
