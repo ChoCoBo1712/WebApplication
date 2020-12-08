@@ -32,10 +32,10 @@ jobs:
       - name: Setting up application config json
         run: |
           cd ${{ env.WORK_DIR }} \
-          && echo "`jq '.Project.ConnectionString="${{ secrets.DB_CONNECTION_STRING }}"' appsettings.json`" > appsettings.json \
-          && echo "`jq '.Mailing.Password="${{ secrets.MAILING_PASSWORD }}"' appsettings.json`" > appsettings.json \
-          && echo "`jq '.Google.ClientId="${{ secrets.GOOGLE_CLIENT_ID }}"' appsettings.json`" > appsettings.json \
-          && echo "`jq '.Google.ClientSecret="${{ secrets.GOOGLE_CLIENT_SECRET }}"' appsettings.json`" > appsettings.json
+          & echo "`jq '.Project.ConnectionString="${{ secrets.DB_CONNECTION_STRING }}"' appsettings.json`" > appsettings.json \
+          & echo "`jq '.Mailing.Password="${{ secrets.MAILING_PASSWORD }}"' appsettings.json`" > appsettings.json \
+          & echo "`jq '.Google.ClientId="${{ secrets.GOOGLE_CLIENT_ID }}"' appsettings.json`" > appsettings.json \
+          & echo "`jq '.Google.ClientSecret="${{ secrets.GOOGLE_CLIENT_SECRET }}"' appsettings.json`" > appsettings.json
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
