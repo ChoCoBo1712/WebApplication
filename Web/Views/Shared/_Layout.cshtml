@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @await Html.PartialAsync("ScriptsShared")
     @await Html.PartialAsync("CssShared")
-    <a class="cross-fade" href="/">AudioLib</a>
+    @await Html.PartialAsync("ScriptsShared")
 </head>
 <body>
+<a class="cross-fade" href="/">AudioLib</a>
 <section>
     @RenderBody()
 </section>

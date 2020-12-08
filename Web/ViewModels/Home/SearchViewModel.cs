@@ -13,5 +13,5 @@ namespace Web.ViewModels.Home
         public List<Song> Songs { get; set; }
     }
     
-    public enum Categories {Songs, Albums, Artists, Tags}
+    public enum Categories {Audios, Albums, Artists, Tags}
 }
