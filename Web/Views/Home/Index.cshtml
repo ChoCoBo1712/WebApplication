@@ -5,23 +5,6 @@
 <head>
     <meta name="viewport" content="width=device-width"/>
     <title>Index</title>
-    <div>
-        @if (User.Identity.IsAuthenticated)
-        {
-            <div>@User.Identity.Name</div>
-            <div>
-                <form method="post" asp-controller="Account" asp-action="Logout">
-                    <input type="submit" value="Logout" style="margin-top: 10px"/>
-                </form>
-            </div>
-        }
-        else
-        {
-            <a class="cross-fade" asp-controller="Account" asp-action="Login">Login</a>
-            <a class="cross-fade" asp-controller="Account" asp-action="Register">Register</a>
-        }
-    </div>
-    <hr/>
 </head>
 <body>
 <div align="center">
@@ -64,7 +47,7 @@
                <td><a class="draw-outline draw-outline--tandem" href="/home/artist?id=@song.Album.Artist.Id">@song.Album.Artist.Name</a></td>
                <td><a class="draw-outline draw-outline--tandem" href="/home/album?id=@song.Album.Id">@song.Album.Name</a></td>
                <td>
-                   <div style="height: 20px; width: 100px; overflow-y: auto; overflow-x: hidden">
+                   <div class="inline" style="height: 20px; width: 100px; overflow-y: auto; overflow-x: hidden; padding-right: 10px">
                        <table>
                            @foreach (var tag in song.Tags)
                            {
@@ -76,7 +59,7 @@
                            }
                        </table>
                    </div>
-                   <div>
+                   <div class="inline">
                        @if (User.Identity.IsAuthenticated)
                       {
                          <a class="draw-outline draw-outline--tandem" href="/home/addTag?id=@song.Id">Add</a>

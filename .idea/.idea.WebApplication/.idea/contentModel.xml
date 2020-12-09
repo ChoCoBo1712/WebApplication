@@ -252,10 +252,12 @@
             <e p="Albums" t="Include">
               <e p="4641fc5a-c8eb-4301-9f9d-1bd0ccf1a849_gachi-production-and-trade-joint-stock-company-logo-2047.png" t="Include" />
               <e p="5f849913-e8cc-4212-a4b7-de93bdce5a74_dfb04aeb6f0cc5ed55292deb3e28c8fa7277f90dr1-195-258v2_uhq.jpg" t="Include" />
+              <e p="ef91f458-5a53-49cf-956f-7a80065235a2_gachi-production-and-trade-joint-stock-company-logo-2047.png" t="Include" />
             </e>
             <e p="Artists" t="Include">
               <e p="052d8fde-1d33-404c-b780-4a118c578ea5_Снимок экрана 2020-11-24 183432.png" t="Include" />
               <e p="32989b88-99a2-4bb4-b5f1-b1a880840af4_Снимок экрана 2020-11-24 183432.png" t="Include" />
+              <e p="6123999a-ae71-4d8b-a960-4768e41e6240_JQlRRpraTWs.jpg" t="Include" />
             </e>
           </e>
           <e p="Index.cshtml" t="Include" />
@@ -265,6 +267,7 @@
           <e p="logs" t="Include">
             <e p="all-20201208.log" t="Include" />
             <e p="all-20201209.log" t="Include" />
+            <e p="all-20201210.log" t="Include" />
             <e p="error-20201208.log" t="Include" />
           </e>
         </e>

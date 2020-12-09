@@ -3,9 +3,27 @@
 <head>
     @await Html.PartialAsync("CssShared")
     @await Html.PartialAsync("ScriptsShared")
+    <a class="cross-fade inline" href="/">AudioLib</a>
+    <div class="inline" style="float: right">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="inline" style="padding-right: 20px">@User.Identity.Name</div>
+                <div class="inline">
+                    <form method="post" asp-controller="Account" asp-action="Logout">
+                        <input type="submit" value="Logout" style="margin-top: 10px"/>
+                    </form>
+                </div>
+            }
+            else
+            {
+                <a class="cross-fade" asp-controller="Account" asp-action="Login">Login</a>
+                <a class="cross-fade" asp-controller="Account" asp-action="Register">Register</a>
+            }
+        </div>
+        <hr/>
 </head>
 <body>
-<a class="cross-fade" href="/">AudioLib</a>
+
 <section>
     @RenderBody()
 </section>

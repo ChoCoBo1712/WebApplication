@@ -40,7 +40,7 @@ namespace Repository
                 return null;
             
             var artist = mapper.Map<Artist>(efArtist);
-            artist.Albums = mapper.Map<List<Album>>(context.Albums.Where(t => t.Id == efArtist.Id));
+            artist.Albums = mapper.Map<List<Album>>(context.Albums.Where(t => t.ArtistId == efArtist.Id));
 
             return artist;
         }
