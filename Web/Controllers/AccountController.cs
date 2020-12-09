@@ -130,7 +130,7 @@ namespace Web.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Incorrect login or password");
+                    ModelState.AddModelError(string.Empty, "Incorrect login or password");
                 }
             }
             return View(model);

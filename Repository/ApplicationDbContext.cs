@@ -43,8 +43,8 @@ namespace Repository
             modelBuilder.Entity<IdentityRole<int>>().HasData(new IdentityRole<int>()
             {
                 Id = 2,
-                Name = "customer",
-                NormalizedName = "CUSTOMER"
+                Name = "user",
+                NormalizedName = "USER"
             });
             
             modelBuilder.Entity<IdentityUser<int>>().HasData(new IdentityUser<int>()

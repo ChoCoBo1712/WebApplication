@@ -17,13 +17,11 @@ namespace Web.Controllers
     public class HomeController : Controller
     {
         private readonly IDataManager dataManager;
-        private readonly IPopulator populator;
         IHubContext<NotificationHub> hubContext;
 
-        public HomeController(IDataManager dataManager, IPopulator populator, IHubContext<NotificationHub> hubContext)
+        public HomeController(IDataManager dataManager, IHubContext<NotificationHub> hubContext)
         {
             this.dataManager = dataManager;
-            this.populator = populator;
             this.hubContext = hubContext;
         }
         
@@ -35,7 +33,6 @@ namespace Web.Controllers
                 Category = 0,
                 Search = ""
             };
-            // populator.Add();
             return View(model);
         }
 

@@ -38,7 +38,7 @@ namespace Web.Areas.Admin.Controllers
                 string fileName = null;
                 if (model.Image != null)
                 {
-                    fileName = await UploadFile(model.Image);
+                    fileName = await fileService.UploadFile(model.Image, Path.Combine(environment.WebRootPath, "img/artists"));
                 } 
                 
                 if (fileName == null)
@@ -79,8 +79,8 @@ namespace Web.Areas.Admin.Controllers
                     if (model.Image != null)
                     {
                         if (artist.ImagePath != null)
-                            DeleteFile(artist.ImagePath);
-                        artist.ImagePath = await UploadFile(model.Image);
+                            fileService.DeleteFile(artist.ImagePath, Path.Combine(environment.WebRootPath, "img/artists"));
+                        artist.ImagePath = await fileService.UploadFile(model.Image, Path.Combine(environment.WebRootPath, "img/artists"));
                     }
                     artist.Name = model.Name;
                     artist.Description = model.Description;
@@ -98,37 +98,10 @@ namespace Web.Areas.Admin.Controllers
             Artist artist = dataManager.ArtistRepository.Get(id);
             if (artist != null)
             {
-                DeleteFile(artist.ImagePath);
+                fileService.DeleteFile(artist.ImagePath, Path.Combine(environment.WebRootPath, "img/artists"));
                 dataManager.ArtistRepository.Delete(id);
             }
             return Redirect("/admin/artists");
-        }
-        
-        private async Task<string> UploadFile(IFormFile file)
-        {
-            string uploadDir = Path.Combine(environment.WebRootPath, "img/artists");
-
-            if (!Directory.Exists(uploadDir))
-            {
-                Directory.CreateDirectory(uploadDir);
-            }
-            
-            string fileName = $"{Guid.NewGuid().ToString()}_{file.FileName}";
-            string filePath = Path.Combine(uploadDir, fileName);
-            
-            await fileService.SaveFile(file, filePath);
-            return fileName;
-        }
-
-        private void DeleteFile(string fileName)
-        {
-            string uploadDir = Path.Combine(environment.WebRootPath, "img/artists");
-            string filePath = Path.Combine(uploadDir, fileName);
-            
-            if (System.IO.File.Exists(filePath))
-            {
-                System.IO.File.Delete(filePath);
-            }
         }
     }
 }

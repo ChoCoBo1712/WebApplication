@@ -50,7 +50,7 @@ namespace Web.Areas.Admin.Controllers
                 string fileName = null;
                 if (model.File != null)
                 {
-                    fileName = await UploadFile(model.File);
+                    fileName = await fileService.UploadFile(model.File, Path.Combine(environment.WebRootPath, "audio"));
                 }
                 
                 if (fileName == null)
@@ -109,8 +109,8 @@ namespace Web.Areas.Admin.Controllers
                     if (model.File != null)
                     {
                         if (song.FilePath != null)
-                            DeleteFile(song.FilePath);
-                        song.FilePath = await UploadFile(model.File);
+                            fileService.DeleteFile(song.FilePath, Path.Combine(environment.WebRootPath, "audio"));
+                        song.FilePath = await fileService.UploadFile(model.File, Path.Combine(environment.WebRootPath, "audio"));
                     }
                     song.Name = model.Name;
                     song.Album = dataManager.AlbumRepository.Get(model.AlbumId);
@@ -129,37 +129,10 @@ namespace Web.Areas.Admin.Controllers
             Song song = dataManager.SongRepository.Get(id);
             if (song != null)
             {
-                DeleteFile(song.FilePath);
+                fileService.DeleteFile(song.FilePath, Path.Combine(environment.WebRootPath, "audio"));
                 dataManager.SongRepository.Delete(id);
             }
             return Redirect("/admin/songs");
-        }
-        
-        private async Task<string> UploadFile(IFormFile file)
-        {
-            string uploadDir = Path.Combine(environment.WebRootPath, "audio");
-
-            if (!Directory.Exists(uploadDir))
-            {
-                Directory.CreateDirectory(uploadDir);
-            }
-            
-            string fileName = $"{Guid.NewGuid().ToString()}_{file.FileName}";
-            string filePath = Path.Combine(uploadDir, fileName);
-            
-            await fileService.SaveFile(file, filePath);
-            return fileName;
-        }
-
-        private void DeleteFile(string fileName)
-        {
-            string uploadDir = Path.Combine(environment.WebRootPath, "audio");
-            string filePath = Path.Combine(uploadDir, fileName);
-            
-            if (System.IO.File.Exists(filePath))
-            {
-                System.IO.File.Delete(filePath);
-            }
         }
     }
 }

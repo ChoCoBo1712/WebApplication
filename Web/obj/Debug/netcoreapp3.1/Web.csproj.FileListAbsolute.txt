@@ -103,7 +103,7 @@ C:\Users\BigBe\RiderProjects\WebApplication\Web\bin\Debug\netcoreapp3.1\Serilog.
 C:\Users\BigBe\RiderProjects\WebApplication\Web\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Views\Error\403.cshtml.g.cs
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Views\Error\404.cshtml.g.cs
-C:\Users\BigBe\RiderProjects\WebApplication\Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
-C:\Users\BigBe\RiderProjects\WebApplication\Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Email.cshtml.g.cs
 C:\Users\BigBe\RiderProjects\WebApplication\Web\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Users\Index.cshtml.g.cs
+C:\Users\BigBe\RiderProjects\WebApplication\Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\BigBe\RiderProjects\WebApplication\Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll

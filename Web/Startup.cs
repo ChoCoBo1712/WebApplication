@@ -58,7 +58,6 @@ namespace Web
                 cfg.AddProfile(new MappingProfile());
             });
             services.AddSingleton(typeof(IMapper), mapperConfig.CreateMapper());
-            services.AddScoped<IPopulator>(t => new Populator(t.GetRequiredService<IDataManager>()));
             services.AddScoped<IEmailService>(t => new EmailService(
                 MailConfig.Sender, MailConfig.SmtpServer, MailConfig.SmtpPort, MailConfig.Username, MailConfig.Password
             ));
