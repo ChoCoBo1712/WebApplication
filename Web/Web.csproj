@@ -21,7 +21,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="wwwroot\audio" />
       <Folder Include="wwwroot\img" />
+      <Folder Include="wwwroot\img\albums" />
+      <Folder Include="wwwroot\img\artists" />
       <Folder Include="wwwroot\logs" />
     </ItemGroup>
 

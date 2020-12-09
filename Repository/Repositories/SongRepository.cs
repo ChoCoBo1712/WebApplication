@@ -49,6 +49,10 @@ namespace Repository
 
         public int Save(Song song)
         {
+            foreach (var tag in song.Tags)
+            {
+                tag.Songs.Clear();
+            }
             var efSong = mapper.Map<EFSong>(song);
             
             if (efSong.Id == default)

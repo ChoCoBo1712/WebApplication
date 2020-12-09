@@ -125,6 +125,10 @@ namespace Web.Controllers
                     {
                         await hubContext.Clients.User(id).SendAsync("notify", "Your tag is already verified and was added");   
                     }
+                    else
+                    {
+                        await hubContext.Clients.User(id).SendAsync("notify", "Your tag will be verified");
+                    }
                 }
                 else
                 {

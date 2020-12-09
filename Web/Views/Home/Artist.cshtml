@@ -4,7 +4,7 @@
     <div>
         <h2>@Model.Name</h2>
         <hr/>
-        <img src="~/img/artists/@Model.ImagePath" width="100" height="100">
+        <img src="~/img/artists/@Model.ImagePath" style="width: auto; height: 100px">
     </div>
     <div>@Model.Description</div>
     <h4>Albums</h4>
@@ -17,7 +17,7 @@
     {
         <tr>
             <td><a class="draw-outline draw-outline--tandem" href="/home/album?id=@album.Id">@album.Name</a></td>
-            <td><img src="~/img/albums/@album.ImagePath" width="60" height="60"></td>
+            <td><img src="~/img/albums/@album.ImagePath" style="width: auto; height: 60px"></td>
         </tr>
     }
     </table>
