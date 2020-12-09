@@ -17,6 +17,8 @@
           <e p="BaseEntity.cs" t="Include" />
           <e p="Song.cs" t="Include" />
           <e p="Tag.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="UserRole.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -45,6 +47,8 @@
           <e p="EFArtist.cs" t="Include" />
           <e p="EFSong.cs" t="Include" />
           <e p="EFTag.cs" t="Include" />
+          <e p="EFUser.cs" t="Include" />
+          <e p="EFUserRole.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

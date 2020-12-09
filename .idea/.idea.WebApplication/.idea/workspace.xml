@@ -31,61 +31,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="css fix">
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/AccountControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/Admin/AlbumsControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/Admin/ArtistsControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/Admin/ModelsControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/Admin/SongsControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/Admin/TagsControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/Admin/UsersControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/ErrorControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Controllers/HomeControllerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/Test.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/obj/Test.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/Implementations/FileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Implementations/FileService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/Implementations/Populator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/Interfaces/IFileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Interfaces/IFileService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/Interfaces/IPopulator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Service/Service.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/AccountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication.sln" afterDir="false" />
+    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="unit tests init">
+      <change afterPath="$PROJECT_DIR$/Domain/Models/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Models/UserRole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Repository/Models/EFUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Repository/Models/EFUserRole.cs" afterDir="false" />
     </list>
     <list id="243181e1-e5d0-47de-bd4a-77fb76bcee80" name="added github secrets" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +60,7 @@
     <setting file="file://$PROJECT_DIR$/Web/Areas/Admin/Views/Albums/Create.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Class1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C53339FA-33AE-4A79-B417-6C8AF57A8C4B/1D/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/BigBe/RiderProjects/WebApplication/Web/Controllers/AccountController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Repository/Repositories/SongRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Web/Areas/Admin/Views/Artists/Edit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1BA52DC0-B103-422E-BA91-AD87A1AA9FE3/7/ServiceCollectionServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -125,10 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/Areas/Admin/Views/Songs/Edit.cshtml" />
-        <option value="$PROJECT_DIR$/Web/Views/Account/Register.cshtml" />
-        <option value="$PROJECT_DIR$/Web/Views/Account/Login.cshtml" />
-        <option value="$PROJECT_DIR$/Web/Views/Home/Artist.cshtml" />
         <option value="$PROJECT_DIR$/Web/Controllers/ErrorController.cs" />
         <option value="$PROJECT_DIR$/Web/Views/Error/403.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Error/404.cshtml" />
@@ -176,6 +123,10 @@
         <option value="$PROJECT_DIR$/Test/Controllers/Admin/AlbumsControllerTests.cs" />
         <option value="$PROJECT_DIR$/Test/Controllers/Admin/SongsControllerTests.cs" />
         <option value="$PROJECT_DIR$/Test/Controllers/Admin/TagsControllerTests.cs" />
+        <option value="$PROJECT_DIR$/Domain/Models/User.cs" />
+        <option value="$PROJECT_DIR$/Domain/Models/UserRole.cs" />
+        <option value="$PROJECT_DIR$/Repository/Models/EFUser.cs" />
+        <option value="$PROJECT_DIR$/Repository/Models/EFUserRole.cs" />
       </list>
     </option>
   </component>
@@ -259,7 +210,7 @@
       <workItem from="1607375801859" duration="3377000" />
       <workItem from="1607419450474" duration="20183000" />
       <workItem from="1607524558889" duration="7144000" />
-      <workItem from="1607533506807" duration="10263000" />
+      <workItem from="1607533506807" duration="10800000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606136494926</created>
@@ -499,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607442586969</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="unit tests init">
+      <created>1607544130808</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1607544130808</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,29 +472,29 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 1% 2335/2358" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 1% 2535/2558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 1% 2335/2358" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 1% 2535/2558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Web 1% 708/718" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 1% 2335/2358" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 1% 2535/2558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Web 1% 708/718" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Web 1% 708/718" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 1% 2335/2358" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 1% 2535/2558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Web 1% 708/718" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Web 1% 708/718" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Controllers 4% 201/210" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 1% 2335/2358" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 1% 2535/2558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Web 1% 708/718" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Web 1% 708/718" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Controllers 4% 201/210" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
@@ -572,7 +530,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Domain models added" />
     <MESSAGE value="Added repository models" />
     <MESSAGE value="Added db" />
     <MESSAGE value="Added services project" />
@@ -597,7 +554,8 @@
     <MESSAGE value="added margins" />
     <MESSAGE value="file fix" />
     <MESSAGE value="css fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="css fix" />
+    <MESSAGE value="unit tests init" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607533560184">
