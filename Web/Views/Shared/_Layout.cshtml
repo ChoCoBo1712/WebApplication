@@ -3,6 +3,10 @@
 <head>
     @await Html.PartialAsync("CssShared")
     @await Html.PartialAsync("ScriptsShared")
+    
+    <meta name="viewport" content="width=device-width"/>
+    <title>AudioLib</title>
+    
     <a class="cross-fade inline" href="/">AudioLib</a>
     <div class="inline" style="float: right">
             @if (User.Identity.IsAuthenticated)

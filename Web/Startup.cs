@@ -22,83 +22,44 @@ using Service.Implementations;
 using Service.Interfaces;
 using Web.Configs;
 using Web.Hubs;
+using DbContextOptions = Repository.DbContextOptions;
 
 namespace Web
 {
     public class Startup
     {
-        private IConfiguration Configuration { get; }
+        private IConfiguration configuration { get; }
         private IWebHostEnvironment env { get; }
         
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
-            Configuration = configuration;
+            this.configuration = configuration;
             this.env = env;
         } 
         
         public void ConfigureServices(IServiceCollection services)
         {
+            var appOptions = new AppConfig();
+            configuration.GetSection(AppConfig.SectionName).Bind(appOptions);
+            
             //DB and configs
-            Configuration.Bind("Project", new Config());
-            Configuration.Bind("Mailing", new MailConfig());
-            Configuration.Bind("Google", new GoogleConfig());
-            services.AddDbContext<ApplicationDbContext>(t => 
-                t.UseNpgsql(Config.ConnectionString), ServiceLifetime.Transient);
+            services.AddRepositories(new DbContextOptions { ConnectionString = appOptions.ConnectionString });
             
             //Data and services
-            services.AddScoped<IRepository<Song>, SongRepository>();
-            services.AddScoped<IRepository<Album>, AlbumRepository>();
-            services.AddScoped<IRepository<Artist>, ArtistRepository>();
-            services.AddScoped<IRepository<Tag>, TagRepository>();
-            services.AddScoped<IDataManager, DataManager>();
-            services.AddScoped<IFileService, FileService>();
-            services.AddControllersWithViews();
-            var mapperConfig = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new MappingProfile());
-            });
-            services.AddSingleton(typeof(IMapper), mapperConfig.CreateMapper());
-            services.AddScoped<IEmailService>(t => new EmailService(
-                MailConfig.Sender, MailConfig.SmtpServer, MailConfig.SmtpPort, MailConfig.Username, MailConfig.Password
-            ));
-            services.AddSignalR();
-            services.AddLogging(opt =>
-            {
-                opt.AddConsole();
-                opt.AddFile(Path.Combine(env.WebRootPath, "logs/all.log"));
-                opt.AddFile(Path.Combine(env.WebRootPath, "logs/error.log"), LogLevel.Error);
-            });
-            
+            services.AddAppServices(env, configuration);
+
             //Authentication
-            services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
-                {
-                    options.User.RequireUniqueEmail = true;
-                    options.Password.RequiredLength = 8;
-                    options.Password.RequireNonAlphanumeric = false;
-                    options.Password.RequireLowercase = false;
-                    options.Password.RequireUppercase = false;
-                    options.Password.RequireDigit = false;
-                })
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
-            services.AddAuthentication().AddGoogle(options =>
+            services.AddAuth(configuration);
+            
+            services.ConfigureIdentity(options =>
             {
-                options.ClientId = GoogleConfig.ClientId;
-                options.ClientSecret = GoogleConfig.ClientSecret;
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireDigit = false;
             });
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.LoginPath = "/account/login";
-            });
-            services.AddAuthorization(x =>
-            {
-                x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
-            });
-            services.AddControllersWithViews(options =>
-            {
-                options.Conventions.Add(new AdminAreaAuth("Admin", "AdminArea"));
-            })
-            .AddSessionStateTempDataProvider();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

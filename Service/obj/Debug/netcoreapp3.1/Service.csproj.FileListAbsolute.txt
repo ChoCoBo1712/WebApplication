@@ -15,10 +15,4 @@ C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Repo
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.xml
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.dll
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Cookies.dll
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.Abstractions.dll
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.dll
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.xml
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Cookies.xml
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.DataProtection.Abstractions.xml
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.xml

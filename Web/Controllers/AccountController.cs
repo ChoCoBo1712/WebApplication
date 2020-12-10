@@ -29,6 +29,11 @@ namespace Web.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Register(string returnUrl = null)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/");
+            }
+            
             return View(new RegisterViewModel()
             {
                 ReturnUrl = returnUrl,
@@ -73,6 +78,11 @@ namespace Web.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> ConfirmEmail(string userId, string code)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/");
+            }
+            
             if (userId == null || code == null)
             {
                 return View("Error");
@@ -92,6 +102,11 @@ namespace Web.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(string returnUrl = null)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/");
+            }
+            
             return View(new LoginViewModel
             {
                 ReturnUrl = returnUrl,
@@ -140,6 +155,11 @@ namespace Web.Controllers
         [AllowAnonymous]
         public IActionResult ExternalLogin(string provider, string returnUrl)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/");
+            }
+            
             var redirectUrl = Url.Action("ExternalLoginCallback", "Account",
                 new {ReturnUrl = returnUrl});
             var properties = signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);

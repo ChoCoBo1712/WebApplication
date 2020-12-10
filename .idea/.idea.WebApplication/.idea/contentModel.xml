@@ -32,6 +32,8 @@
       <e p="Repository" t="IncludeRecursive">
         <e p="ApplicationDbContext.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DbContextOptions.cs" t="Include" />
+        <e p="DIExtensions.cs" t="Include" />
         <e p="MappingProfile.cs" t="Include" />
         <e p="Migrations" t="Include">
           <e p="20201203091921_'name'.cs" t="Include" />
@@ -169,8 +171,11 @@
         <e p="Configs" t="Include">
           <e p="AdminAreaAuth.cs" t="Include" />
           <e p="AllowedExtensions.cs" t="Include" />
+          <e p="AppConfig.cs" t="Include" />
           <e p="Config.cs" t="Include" />
+          <e p="DIExtensions.cs" t="Include" />
           <e p="GoogleConfig.cs" t="Include" />
+          <e p="LoggingConfig.cs" t="Include" />
           <e p="MailConfig.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">

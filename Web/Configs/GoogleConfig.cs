@@ -2,7 +2,9 @@ namespace Web.Configs
 {
     public class GoogleConfig
     {
-        public static string ClientId { get; set; }
-        public static string ClientSecret { get; set; }
+        public const string SectionName = "Google";
+        
+        public string ClientId { get; set; }
+        public string ClientSecret { get; set; }
     }
 }
