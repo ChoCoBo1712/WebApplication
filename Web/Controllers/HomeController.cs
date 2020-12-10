@@ -83,11 +83,6 @@ namespace Web.Controllers
 
         public IActionResult AddTag(int id)
         {
-            if (!User.Identity.IsAuthenticated)
-            {
-                return Redirect("/");
-            }
-            
             TagViewModel model = new TagViewModel
             {
                 SongId = id

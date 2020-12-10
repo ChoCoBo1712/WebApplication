@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Domain.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Moq;
