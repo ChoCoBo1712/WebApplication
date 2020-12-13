@@ -1,4 +1,5 @@
 using System;
+using AutoMapper;
 using Domain;
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
@@ -19,11 +20,19 @@ namespace Repository
             services.AddScoped<IRepository<Album>, AlbumRepository>();
             services.AddScoped<IRepository<Artist>, ArtistRepository>();
             services.AddScoped<IRepository<Tag>, TagRepository>();
+            services.AddScoped<IUserRepository>(x =>
+                new UserRepository(
+                    x.GetRequiredService<UserManager<EFUser>>(), 
+                    x.GetRequiredService<RoleManager<EFUserRole>>(), 
+                    x.GetRequiredService<SignInManager<EFUser>>(),
+                    x.GetRequiredService<IMapper>()
+                )
+            );
         }
-        
+
         public static void ConfigureIdentity(this IServiceCollection services, Action<IdentityOptions> options)
         {
-            services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
+            services.AddIdentity<EFUser, EFUserRole>(options =>
                 {
                     options.User.RequireUniqueEmail = true;
                     options.Password.RequiredLength = 8;

@@ -1,7 +1,9 @@
 using System.Linq;
 using System.Threading.Tasks;
+using Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Repository.Models;
 using Service.Interfaces;
 
 namespace Web.Areas.Admin.Controllers
@@ -9,22 +11,22 @@ namespace Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class UsersController : Controller
     {
-        private readonly UserManager<IdentityUser<int>> userManager;
+        private readonly IUserRepository userRepository;
 
-        public UsersController(UserManager<IdentityUser<int>> userManager)
+        public UsersController(IUserRepository userRepository)
         {
-            this.userManager = userManager;
+            this.userRepository = userRepository;
         }
         
-        public IActionResult Index() => View(userManager.Users.ToList());
+        public IActionResult Index() => View(userRepository.GetAllUsers());
         
         [HttpPost]
         public async Task<ActionResult> Delete(int id)
         {
-            var user = await userManager.FindByIdAsync(id.ToString());
+            var user = await userRepository.FindByIdAsync(id.ToString());
             if (user != null)
             {
-                await userManager.DeleteAsync(user);
+                await userRepository.DeleteAsync(user);
             }
             return Redirect("/admin/users");
         }

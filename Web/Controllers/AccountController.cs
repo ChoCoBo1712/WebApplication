@@ -1,10 +1,13 @@
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Domain;
 using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Repository;
+using Repository.Models;
 using Service.Implementations;
 using Service.Interfaces;
 using Web.ViewModels.Account;
@@ -13,16 +16,13 @@ namespace Web.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser<int>> userManager;
-        private readonly SignInManager<IdentityUser<int>> signInManager;
         private readonly IEmailService emailService;
+        private readonly IUserRepository userRepository;
 
-        public AccountController(UserManager<IdentityUser<int>> userManager,
-            SignInManager<IdentityUser<int>> signInManager, IEmailService emailService)
+        public AccountController(IEmailService emailService, IUserRepository userRepository)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
             this.emailService = emailService;
+            this.userRepository = userRepository;
         }
         
         [HttpGet]
@@ -37,7 +37,7 @@ namespace Web.Controllers
             return View(new RegisterViewModel()
             {
                 ReturnUrl = returnUrl,
-                ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
+                ExternalLogins = await userRepository.GetExternalAuthenticationSchemesAsync()
             });
         }
         
@@ -45,16 +45,15 @@ namespace Web.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            model.ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            model.ExternalLogins = await userRepository.GetExternalAuthenticationSchemesAsync();
             
             if(ModelState.IsValid)
             {
-                IdentityUser<int> user = new IdentityUser<int> { Email = model.Email, UserName = model.UserName};
-               
-                var result = await userManager.CreateAsync(user, model.Password);
+                var result = await userRepository.GetCreateResultAsync(model.Email, model.UserName, model.Password);
+                var user = await userRepository.FindByNameAsync(model.UserName);
                 if (result.Succeeded)
                 {
-                    var code = await userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var code = await userRepository.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.Action(
                         "ConfirmEmail",
                         "Account",
@@ -87,12 +86,14 @@ namespace Web.Controllers
             {
                 return View("Error");
             }
-            var user = await userManager.FindByIdAsync(userId);
+
+            var user = await userRepository.FindByIdAsync(userId);
             if (user == null)
             {
                 return View("Error");
             }
-            var result = await userManager.ConfirmEmailAsync(user, code);
+
+            var result = await userRepository.GetConfirmEmailResultAsync(user, code);
             if(result.Succeeded)
                 return RedirectToAction("Index", "Home");
             return View("Error");
@@ -110,7 +111,7 @@ namespace Web.Controllers
             return View(new LoginViewModel
             {
                 ReturnUrl = returnUrl,
-                ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
+                ExternalLogins = await userRepository.GetExternalAuthenticationSchemesAsync()
             });
         }
  
@@ -124,21 +125,21 @@ namespace Web.Controllers
                 return Redirect("/");
             }
 
-            model.ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            model.ExternalLogins = await userRepository.GetExternalAuthenticationSchemesAsync();
             
             if (ModelState.IsValid)
             {
-                var user = await userManager.FindByNameAsync(model.UserName);
+                var user = await userRepository.FindByNameAsync(model.UserName);
                 if (user != null)
                 {
-                    if (!await userManager.IsEmailConfirmedAsync(user))
+                    if (!await userRepository.IsEmailConfirmedAsync(user))
                     {
                         ModelState.AddModelError(string.Empty, "You didn't confirm your email");
                         return View(model);
                     }
                 }
  
-                var result = await signInManager.PasswordSignInAsync(model.UserName, model.Password, false, false);
+                var result = await userRepository.PasswordSignInAsync(model.UserName, model.Password);
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Home");
@@ -162,7 +163,7 @@ namespace Web.Controllers
             
             var redirectUrl = Url.Action("ExternalLoginCallback", "Account",
                 new {ReturnUrl = returnUrl});
-            var properties = signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            var properties = userRepository.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
             return new ChallengeResult(provider, properties);
         }
 
@@ -174,7 +175,7 @@ namespace Web.Controllers
             LoginViewModel loginViewModel = new LoginViewModel
             {
                 ReturnUrl = returnUrl,
-                ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
+                ExternalLogins = await userRepository.GetExternalAuthenticationSchemesAsync()
             };
             
             if (remoteError != null)
@@ -184,7 +185,7 @@ namespace Web.Controllers
                 return View("Login", loginViewModel);
             }
 
-            var info = await signInManager.GetExternalLoginInfoAsync();
+            var info = await userRepository.GetExternalLoginInfoAsync();
             if (info == null)
             {
                 ModelState.AddModelError(string.Empty, "Error loading external login information");
@@ -192,8 +193,7 @@ namespace Web.Controllers
                 return View("Login", loginViewModel);
             }
 
-            var signInResult = await signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey,
-                false, true);
+            var signInResult = await userRepository.ExternalLoginSignInAsync(info);
 
             if (signInResult.Succeeded)
             {
@@ -205,22 +205,7 @@ namespace Web.Controllers
 
                 if (email != null)
                 {
-                    var user = await userManager.FindByEmailAsync(email);
-
-                    if (user == null)
-                    {
-                        user = new IdentityUser<int>
-                        {
-                            UserName = info.Principal.FindFirstValue(ClaimTypes.Email),
-                            Email = info.Principal.FindFirstValue(ClaimTypes.Email),
-                            EmailConfirmed = true
-                        };
-
-                        await userManager.CreateAsync(user);
-                    }
-                    
-                    await userManager.AddLoginAsync(user, info);
-                    await signInManager.SignInAsync(user, false);
+                    await userRepository.ExternalAuthenticationLogin(email, info);
                     
                     return Redirect(returnUrl);
                 }
@@ -237,7 +222,7 @@ namespace Web.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
-            await signInManager.SignOutAsync();
+            await userRepository.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
     }

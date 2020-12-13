@@ -51,6 +51,21 @@ namespace Repository
                 .ForMember("Name", t => t.MapFrom(t => t.Name))
                 .ForMember("UserId", t => t.MapFrom(t => t.UserId))
                 .ForMember("Verified", t => t.MapFrom(t => t.Verified));
+
+            CreateMap<EFUser, User>()
+                .ForMember("Id", t => t.MapFrom(t => t.Id))
+                .ForMember("UserName", t => t.MapFrom(t => t.UserName))
+                .ForMember("Email", t => t.MapFrom(t => t.Email))
+                .ForMember("EmailConfirmed", t => t.MapFrom(t => t.EmailConfirmed))
+                .ForMember("PasswordHash", t => t.MapFrom(t => t.PasswordHash));
+            
+            CreateMap<EFUserRole, UserRole>()
+                .ForMember("Id", t => t.MapFrom(t => t.Id))
+                .ForMember("Name", t => t.MapFrom(t => t.Name));
+            
+            CreateMap<UserRole, EFUserRole>()
+                .ForMember("Id", t => t.MapFrom(t => t.Id))
+                .ForMember("Name", t => t.MapFrom(t => t.Name));
             
         }
     }

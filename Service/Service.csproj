@@ -11,8 +11,6 @@
 
     <ItemGroup>
       <PackageReference Include="MailKit" Version="2.10.0" />
-      <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     </ItemGroup>
 
     <ItemGroup>

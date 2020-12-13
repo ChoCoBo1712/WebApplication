@@ -42,9 +42,9 @@ namespace Web
             var appOptions = new AppConfig();
             configuration.GetSection(AppConfig.SectionName).Bind(appOptions);
             
-            //DB and configs
+            //DB and repos
             services.AddRepositories(new DbContextOptions { ConnectionString = appOptions.ConnectionString });
-            
+
             //Data and services
             services.AddAppServices(env, configuration);
 

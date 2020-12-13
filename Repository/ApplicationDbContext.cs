@@ -5,7 +5,7 @@ using Repository.Models;
 
 namespace Repository
 {
-    public class ApplicationDbContext: IdentityDbContext<IdentityUser<int>, IdentityRole<int>, int>
+    public class ApplicationDbContext: IdentityDbContext<EFUser, EFUserRole, int>
     {
         public DbSet<EFSong> Songs { get; set; }
         public DbSet<EFArtist> Artists { get; set; }
@@ -33,21 +33,21 @@ namespace Repository
                 .WithMany(ar => ar.Albums)
                 .HasForeignKey(al => al.ArtistId);
             
-            modelBuilder.Entity<IdentityRole<int>>().HasData(new IdentityRole<int>()
+            modelBuilder.Entity<EFUserRole>().HasData(new EFUserRole()
             {
                 Id = 1,
                 Name = "admin",
                 NormalizedName = "ADMIN"
             });
 
-            modelBuilder.Entity<IdentityRole<int>>().HasData(new IdentityRole<int>()
+            modelBuilder.Entity<EFUserRole>().HasData(new EFUserRole()
             {
                 Id = 2,
                 Name = "user",
                 NormalizedName = "USER"
             });
             
-            modelBuilder.Entity<IdentityUser<int>>().HasData(new IdentityUser<int>()
+            modelBuilder.Entity<EFUser>().HasData(new EFUser()
             {
                 Id = 1,
                 UserName = "admin",
@@ -55,7 +55,7 @@ namespace Repository
                 Email = "webappprog@gmail.com",
                 NormalizedEmail = "WEBAPPPROG@GMAIL.COM",
                 EmailConfirmed = true,
-                PasswordHash = new PasswordHasher<IdentityUser<int>>().HashPassword(null, "admin"),
+                PasswordHash = new PasswordHasher<EFUser>().HashPassword(null, "admin"),
                 SecurityStamp = string.Empty
             });
 

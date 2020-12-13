@@ -11,6 +11,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain.csproj" t="IncludeRecursive" />
         <e p="IRepository.cs" t="Include" />
+        <e p="IUserRepository.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Album.cs" t="Include" />
           <e p="Artist.cs" t="Include" />
@@ -36,12 +37,8 @@
         <e p="DIExtensions.cs" t="Include" />
         <e p="MappingProfile.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20201203091921_'name'.cs" t="Include" />
-          <e p="20201203091921_'name'.Designer.cs" t="Include" />
-          <e p="20201203210515_'name1'.cs" t="Include" />
-          <e p="20201203210515_'name1'.Designer.cs" t="Include" />
-          <e p="20201206074236_'name2'.cs" t="Include" />
-          <e p="20201206074236_'name2'.Designer.cs" t="Include" />
+          <e p="20201213120313_'migr1'.cs" t="Include" />
+          <e p="20201213120313_'migr1'.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -66,6 +63,7 @@
           <e p="TagRepository.cs" t="Include" />
         </e>
         <e p="Repository.csproj" t="IncludeRecursive" />
+        <e p="UserRepository.cs" t="Include" />
       </e>
       <e p="Service" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -256,8 +254,10 @@
             <e p="all-20201208.log" t="Include" />
             <e p="all-20201209.log" t="Include" />
             <e p="all-20201210.log" t="Include" />
+            <e p="all-20201213.log" t="Include" />
             <e p="error-20201208.log" t="Include" />
             <e p="error-20201210.log" t="Include" />
+            <e p="error-20201213.log" t="Include" />
           </e>
         </e>
       </e>
