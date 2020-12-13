@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Web.Configs;
 

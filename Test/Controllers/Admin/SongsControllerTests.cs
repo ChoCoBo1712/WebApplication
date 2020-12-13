@@ -30,7 +30,8 @@ namespace Test.Admin
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.SongRepository.GetAll()).Returns(GetTestSongs());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.Index() as ViewResult;
             
@@ -54,7 +55,8 @@ namespace Test.Admin
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.SongRepository.GetAll()).Returns(GetTestSongs());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.Index() as ViewResult;
             
@@ -78,7 +80,8 @@ namespace Test.Admin
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.SongRepository.GetAll()).Returns(GetTestSongs());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.Index() as ViewResult;
             

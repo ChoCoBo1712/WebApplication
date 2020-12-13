@@ -71,11 +71,13 @@
           <e p="DataManager.cs" t="Include" />
           <e p="EmailService.cs" t="Include" />
           <e p="FileService.cs" t="Include" />
+          <e p="SearchService.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
           <e p="IDataManager.cs" t="Include" />
           <e p="IEmailService.cs" t="Include" />
           <e p="IFileService.cs" t="Include" />
+          <e p="ISearchService.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -235,7 +237,9 @@
         </e>
         <e p="Web.csproj" t="IncludeRecursive" />
         <e p="wwwroot" t="Include">
-          <e p="audio" t="Include" />
+          <e p="audio" t="Include">
+            <e p="a0daa101-06b9-4747-aad2-c2486709698f_Recording 03-31-20 at 08-41 PM.wav" t="Include" />
+          </e>
           <e p="css" t="Include">
             <e p="error.css" t="Include" />
             <e p="style.css" t="Include" />
@@ -243,8 +247,11 @@
           <e p="img" t="Include">
             <e p="Albums" t="Include">
               <e p="a7396c1c-2b67-4fd7-835a-d51936479fcd_unnamed.jpg" t="Include" />
+              <e p="c41b18aa-1a21-443b-90d3-bcedd0ab1033_Slash_(Slash_album_-_cover_art).jpg" t="Include" />
             </e>
-            <e p="Artists" t="Include" />
+            <e p="Artists" t="Include">
+              <e p="205f434a-bea8-4ee0-8d17-ef6a7cb024af_slash.jpg" t="Include" />
+            </e>
           </e>
           <e p="Index.cshtml" t="Include" />
           <e p="js" t="Include">

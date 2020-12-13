@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -7,7 +6,6 @@ using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Service.Interfaces;
-using Web.Areas.Admin.ViewModels;
 using Web.Hubs;
 using Web.ViewModels.Home;
 using TagViewModel = Web.ViewModels.Home.TagViewModel;
@@ -17,12 +15,14 @@ namespace Web.Controllers
     public class HomeController : Controller
     {
         private readonly IDataManager dataManager;
-        IHubContext<NotificationHub> hubContext;
+        private readonly IHubContext<NotificationHub> hubContext;
+        private readonly ISearchService searchService;
 
-        public HomeController(IDataManager dataManager, IHubContext<NotificationHub> hubContext)
+        public HomeController(IDataManager dataManager, IHubContext<NotificationHub> hubContext, ISearchService searchService)
         {
             this.dataManager = dataManager;
             this.hubContext = hubContext;
+            this.searchService = searchService;
         }
         
         public IActionResult Index()
@@ -41,25 +41,7 @@ namespace Web.Controllers
         {
             if (model.Search != null)
             {
-                switch (model.Category)
-                {
-                    case 0:
-                        model.Songs = dataManager.SongRepository.GetAll().Where(t => 
-                            t.Name.Contains(model.Search, StringComparison.InvariantCultureIgnoreCase)).OrderBy(t => t.Name).ToList();
-                        break;
-                    case 1:
-                        model.Songs = dataManager.SongRepository.GetAll().Where(t => 
-                            t.Album.Name.Contains(model.Search, StringComparison.InvariantCultureIgnoreCase)).OrderBy(t => t.Name).ToList();
-                        break;
-                    case 2:
-                        model.Songs = dataManager.SongRepository.GetAll().Where(t => 
-                            t.Album.Artist.Name.Contains(model.Search, StringComparison.InvariantCultureIgnoreCase)).OrderBy(t => t.Name).ToList();
-                        break;
-                    case 3:
-                        model.Songs = dataManager.SongRepository.GetAll().Where(t => 
-                            t.Tags.Any(x => x.Name.Contains(model.Search, StringComparison.InvariantCultureIgnoreCase))).OrderBy(t => t.Name).ToList();
-                        break;
-                }
+                model.Songs = searchService.SearchByCategory(model.Category, model.Search);
             }
             else
             {

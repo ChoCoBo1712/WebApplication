@@ -1,9 +1,7 @@
-using System;
 using System.IO;
 using System.Threading.Tasks;
 using Domain.Models;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Service.Interfaces;
 using Web.Areas.Admin.ViewModels;

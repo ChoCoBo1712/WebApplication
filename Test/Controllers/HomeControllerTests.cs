@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using System.Linq;
 using Domain.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Moq;
@@ -21,7 +19,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.SongRepository.GetAll()).Returns(GetTestSongs());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             var result = controller.Index();
             
@@ -34,7 +33,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.SongRepository.GetAll()).Returns(GetTestSongs());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.Index() as ViewResult;
             
@@ -47,7 +47,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.SongRepository.GetAll()).Returns(GetTestSongs());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.Index() as ViewResult;
             
@@ -61,7 +62,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.AlbumRepository.Get(1)).Returns(GetTestAlbum());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             var result = controller.Album(1);
             
@@ -74,7 +76,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.AlbumRepository.Get(1)).Returns(GetTestAlbum());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.Album(1) as ViewResult;
             
@@ -87,7 +90,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.ArtistRepository.Get(1)).Returns(GetTestArtist());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             var result = controller.Artist(1);
             
@@ -100,7 +104,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.ArtistRepository.Get(1)).Returns(GetTestArtist());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.Artist(1) as ViewResult;
             
@@ -113,7 +118,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.TagRepository.GetAll()).Returns(GetTestTags());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             var result = controller.AddTag(1);
             
@@ -126,7 +132,8 @@ namespace Test
             var hubContext = new Mock<IHubContext<NotificationHub>>();
             var dataManager = new Mock<IDataManager>();
             dataManager.Setup(t => t.TagRepository.GetAll()).Returns(GetTestTags());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.AddTag(1) as ViewResult;
             
@@ -140,7 +147,8 @@ namespace Test
             var dataManager = new Mock<IDataManager>();
             
             dataManager.Setup(t => t.TagRepository.GetAll()).Returns(GetTestTags());
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.AddTag(1) as ViewResult;
             
@@ -156,7 +164,8 @@ namespace Test
             
             dataManager.Setup(t => t.TagRepository.GetAll()).Returns(GetTestTags());
             
-            var controller = new HomeController(dataManager.Object, hubContext.Object);
+            var searchService = new Mock<ISearchService>();
+            var controller = new HomeController(dataManager.Object, hubContext.Object, searchService.Object);
 
             ViewResult result = controller.AddTag(1) as ViewResult;
             

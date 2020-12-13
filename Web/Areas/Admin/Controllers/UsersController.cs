@@ -1,10 +1,6 @@
-using System.Linq;
 using System.Threading.Tasks;
 using Domain;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Repository.Models;
-using Service.Interfaces;
 
 namespace Web.Areas.Admin.Controllers
 {

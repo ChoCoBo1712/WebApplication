@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Web.Areas.Admin.Controllers;
-using Web.ViewModels.Home;
 using Xunit;
 
 namespace Test.Admin

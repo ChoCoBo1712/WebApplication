@@ -1,6 +1,5 @@
 using System.IO;
 using AutoMapper;
-using AutoMapper.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -61,6 +60,8 @@ namespace Web.Configs
             services.AddScoped<IDataManager, DataManager>();
             
             services.AddScoped<IFileService, FileService>();
+
+            services.AddScoped<ISearchService>(t => new SearchService(t.GetRequiredService<IDataManager>()));
             
             services.AddControllersWithViews();
             

@@ -3,7 +3,6 @@ using AutoMapper;
 using Domain;
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Repository.Models;
@@ -32,15 +31,7 @@ namespace Repository
 
         public static void ConfigureIdentity(this IServiceCollection services, Action<IdentityOptions> options)
         {
-            services.AddIdentity<EFUser, EFUserRole>(options =>
-                {
-                    options.User.RequireUniqueEmail = true;
-                    options.Password.RequiredLength = 8;
-                    options.Password.RequireNonAlphanumeric = false;
-                    options.Password.RequireLowercase = false;
-                    options.Password.RequireUppercase = false;
-                    options.Password.RequireDigit = false;
-                })
+            services.AddIdentity<EFUser, EFUserRole>(options)
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
         }
