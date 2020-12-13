@@ -14,7 +14,7 @@
         "outputPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
@@ -45,7 +45,7 @@
           "dependencies": {
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -77,7 +77,7 @@
         "outputPath": "C:\\Users\\BigBe\\RiderProjects\\WebApplication\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
