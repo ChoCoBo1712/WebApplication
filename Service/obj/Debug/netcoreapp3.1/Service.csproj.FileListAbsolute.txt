@@ -2,7 +2,9 @@ C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Serv
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Service.dll
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Service.pdb
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Repository.dll
 C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Repository.pdb
 C:\Users\BigBe\RiderProjects\WebApplication\Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
 C:\Users\BigBe\RiderProjects\WebApplication\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
 C:\Users\BigBe\RiderProjects\WebApplication\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
@@ -10,5 +12,3 @@ C:\Users\BigBe\RiderProjects\WebApplication\Service\obj\Debug\netcoreapp3.1\Serv
 C:\Users\BigBe\RiderProjects\WebApplication\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
 C:\Users\BigBe\RiderProjects\WebApplication\Service\obj\Debug\netcoreapp3.1\Service.dll
 C:\Users\BigBe\RiderProjects\WebApplication\Service\obj\Debug\netcoreapp3.1\Service.pdb
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Repository.dll
-C:\Users\BigBe\RiderProjects\WebApplication\Service\bin\Debug\netcoreapp3.1\Repository.pdb

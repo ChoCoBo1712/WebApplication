@@ -51,7 +51,8 @@ namespace Repository
         {
             foreach (var tag in song.Tags)
             {
-                tag.Songs.Clear();
+                if (tag.Songs != null)
+                    tag.Songs.Clear();
             }
             var efSong = mapper.Map<EFSong>(song);
             
