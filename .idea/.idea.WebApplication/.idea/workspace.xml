@@ -30,77 +30,22 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="user repo init">
-      <change afterPath="$PROJECT_DIR$/Service/Implementations/SearchService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/Interfaces/ISearchService.cs" afterDir="false" />
+    <list default="true" id="bf57f50f-b401-465b-97e7-9460bdd46ae0" name="Default Changelist" comment="image zoom init">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/IRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/Song.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/UserRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/UserRole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/DIExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/DIExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/Models/EFTag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/Models/EFTag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/bin/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/obj/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/bin/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Service/obj/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/AccountControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/AccountControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/Admin/AlbumsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/Admin/AlbumsControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/Admin/ArtistsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/Admin/ArtistsControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/Admin/ModelsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/Admin/ModelsControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/Admin/SongsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/Admin/SongsControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/Admin/TagsControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/Admin/TagsControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/Admin/UsersControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/Admin/UsersControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Controllers/HomeControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Controllers/HomeControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/AlbumsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/ArtistsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/AlbumViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/AlbumViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/TagViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/ViewModels/TagViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Configs/DIExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Configs/DIExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/TagsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Areas/Admin/Controllers/TagsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ViewModels/Home/AlbumViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/ViewModels/Home/AlbumViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ViewModels/Home/SearchViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/ViewModels/Home/SearchViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Views/Home/Album.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Views/Home/Album.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/Views/Home/Artist.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Views/Home/Artist.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Repository.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bin/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Web/obj/Debug/netcoreapp3.1/Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/wwwroot/css/style.css" afterDir="false" />
     </list>
     <list id="243181e1-e5d0-47de-bd4a-77fb76bcee80" name="added github secrets" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Test/Controllers/Admin/ModelsControllerTests.cs" />
         <option value="$PROJECT_DIR$/Test/Controllers/Admin/ArtistsControllerTest.cs" />
         <option value="$PROJECT_DIR$/Web/Views/Shared/CssShared.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Shared/ScriptsShared.cshtml" />
@@ -153,7 +97,6 @@
         <option value="$PROJECT_DIR$/Web/Configs/LoggingConfig.cs" />
         <option value="$PROJECT_DIR$/Web/Configs/MailConfig.cs" />
         <option value="$PROJECT_DIR$/Repository/DbContextOptions.cs" />
-        <option value="$PROJECT_DIR$/Web/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/Web/Areas/Admin/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/Repository/Models/EFUser.cs" />
@@ -178,7 +121,6 @@
         <option value="$PROJECT_DIR$/Web/Configs/DIExtensions.cs" />
         <option value="$PROJECT_DIR$/Service/Implementations/SearchService.cs" />
         <option value="$PROJECT_DIR$/Service/Interfaces/ISearchService.cs" />
-        <option value="$PROJECT_DIR$/Web/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/Test/Controllers/HomeControllerTests.cs" />
         <option value="$PROJECT_DIR$/Test/Controllers/AccountControllerTests.cs" />
         <option value="$PROJECT_DIR$/Test/Controllers/Admin/AlbumsControllerTests.cs" />
@@ -189,6 +131,9 @@
         <option value="$PROJECT_DIR$/Web/wwwroot/css/style.css" />
         <option value="$PROJECT_DIR$/Web/Views/Home/Artist.cshtml" />
         <option value="$PROJECT_DIR$/Web/Views/Home/Album.cshtml" />
+        <option value="$PROJECT_DIR$/Web/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/Web/Areas/Admin/Controllers/TagsController.cs" />
+        <option value="$PROJECT_DIR$/Web/Views/Home/Index.cshtml" />
       </list>
     </option>
   </component>
@@ -276,7 +221,8 @@
       <workItem from="1607590326612" duration="7763000" />
       <workItem from="1607600214217" duration="1491000" />
       <workItem from="1607712615627" duration="19097000" />
-      <workItem from="1607857207849" duration="16057000" />
+      <workItem from="1607857207849" duration="17861000" />
+      <workItem from="1607933774609" duration="357000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1606136494926</created>
@@ -600,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607866347758</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="image zoom init">
+      <created>1607874031981</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1607874031981</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +599,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="repos update" />
     <MESSAGE value="list output check" />
     <MESSAGE value="added wwwroot" />
     <MESSAGE value="deleted wwwroot" />
@@ -671,7 +623,8 @@
     <MESSAGE value="options pattern and view titles init" />
     <MESSAGE value="tests fix" />
     <MESSAGE value="user repo init" />
-    <option name="LAST_COMMIT_MESSAGE" value="user repo init" />
+    <MESSAGE value="image zoom init" />
+    <option name="LAST_COMMIT_MESSAGE" value="image zoom init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="345" y="57" key="#Inspection_severity" timestamp="1607857813586">
@@ -698,86 +651,86 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="545" y="118" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606136307859" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607873235509">
+    <state width="1493" height="185" key="GridCell.Tab.0.bottom" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607873235509" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607873235508">
+    <state width="1493" height="185" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.0.center" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607873235508" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607873235508">
+    <state width="1493" height="185" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.0.left" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607873235508" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607873235508">
+    <state width="1493" height="185" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.0.right" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607873235508" />
-    <state width="1493" height="185" key="GridCell.Tab.1.bottom" timestamp="1607864248716">
+    <state width="1493" height="185" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.1.bottom" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607864248716" />
-    <state width="1493" height="185" key="GridCell.Tab.1.center" timestamp="1607864248716">
+    <state width="1493" height="185" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.1.center" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607864248716" />
-    <state width="1493" height="185" key="GridCell.Tab.1.left" timestamp="1607864248716">
+    <state width="1493" height="185" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.1.left" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607864248716" />
-    <state width="1493" height="185" key="GridCell.Tab.1.right" timestamp="1607864248716">
+    <state width="1493" height="185" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.1.right" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607864248716" />
-    <state width="1493" height="185" key="GridCell.Tab.2.bottom" timestamp="1607864248717">
+    <state width="1493" height="185" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.2.bottom" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607864248717" />
-    <state width="1493" height="185" key="GridCell.Tab.2.center" timestamp="1607864248717">
+    <state width="1493" height="185" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.2.center" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1607864248717" />
-    <state width="1493" height="185" key="GridCell.Tab.2.left" timestamp="1607864248717">
+    <state width="1493" height="185" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.2.left" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1607864248717" />
-    <state width="1493" height="185" key="GridCell.Tab.2.right" timestamp="1607864248717">
+    <state width="1493" height="185" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.2.right" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1607864248717" />
-    <state width="1493" height="185" key="GridCell.Tab.3.bottom" timestamp="1607864248718">
+    <state width="1493" height="185" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.3.bottom" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607864248718" />
-    <state width="1493" height="185" key="GridCell.Tab.3.center" timestamp="1607864248717">
+    <state width="1493" height="185" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.3.center" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1607864248717" />
-    <state width="1493" height="185" key="GridCell.Tab.3.left" timestamp="1607864248717">
+    <state width="1493" height="185" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.3.left" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1607864248717" />
-    <state width="1493" height="185" key="GridCell.Tab.3.right" timestamp="1607864248717">
+    <state width="1493" height="185" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.3.right" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1607864248717" />
-    <state width="1493" height="185" key="GridCell.Tab.4.bottom" timestamp="1607864248718">
+    <state width="1493" height="185" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.4.bottom" timestamp="1607898619950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607864248718" />
-    <state width="1493" height="185" key="GridCell.Tab.4.center" timestamp="1607864248718">
+    <state width="1493" height="185" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607898619950" />
+    <state width="1493" height="185" key="GridCell.Tab.4.center" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1607864248718" />
-    <state width="1493" height="185" key="GridCell.Tab.4.left" timestamp="1607864248718">
+    <state width="1493" height="185" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.4.left" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1607864248718" />
-    <state width="1493" height="185" key="GridCell.Tab.4.right" timestamp="1607864248718">
+    <state width="1493" height="185" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
+    <state width="1493" height="185" key="GridCell.Tab.4.right" timestamp="1607898619949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="185" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1607864248718" />
+    <state width="1493" height="185" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1607898619949" />
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1607528047176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -794,14 +747,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="326" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1607422773676" />
-    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1606574446622">
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1607896872693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606574446622" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607866351091">
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1607896872693" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607874037603">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607866351091" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607874037603" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1606908738742">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

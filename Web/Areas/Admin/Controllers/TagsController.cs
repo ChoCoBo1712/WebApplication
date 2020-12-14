@@ -34,7 +34,7 @@ namespace Web.Areas.Admin.Controllers
             {
                 Tag tag = new Tag
                 {
-                    Name = model.Name, UserId = 1, Verified = true
+                    Name = model.Name.ToLower(), UserId = 1, Verified = true
                 };
                 dataManager.TagRepository.Save(tag);
                 return Redirect("/admin/tags");
@@ -64,7 +64,7 @@ namespace Web.Areas.Admin.Controllers
                 Tag tag = dataManager.TagRepository.Get(model.Id);
                 if (tag != null)
                 {
-                    tag.Name = model.Name;
+                    tag.Name = model.Name.ToLower();
                     if (!tag.Verified)
                     {
                         tag.Verified = true;

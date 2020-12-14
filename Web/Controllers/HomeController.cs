@@ -79,7 +79,7 @@ namespace Web.Controllers
             {
                 Tag tag = new Tag
                 {
-                    Name = model.Name, UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)), Verified = false
+                    Name = model.Name.ToLower(), UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)), Verified = false
                 };
                 
                 bool save = true;
