@@ -143,5 +143,7 @@ namespace Repository
             
             await userManager.DeleteAsync(efUser);
         }
+        
+        
     }
 }

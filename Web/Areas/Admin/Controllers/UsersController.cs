@@ -1,6 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Domain;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using Web.Areas.Admin.ViewModels;
 
 namespace Web.Areas.Admin.Controllers
 {
@@ -13,8 +18,11 @@ namespace Web.Areas.Admin.Controllers
         {
             this.userRepository = userRepository;
         }
-        
-        public IActionResult Index() => View(userRepository.GetAllUsers());
+
+        public async Task<IActionResult> Index()
+        {
+            return View(userRepository.GetAllUsers());
+        }
         
         [HttpPost]
         public async Task<ActionResult> Delete(int id)
